@@ -39,8 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="237DeleteNodeInALinkedList.cs" />
-    <Compile Include="28ImplementStrStr.cs" />
+    <Compile Include="237_DeleteNodeInALinkedList.cs" />
+    <Compile Include="28I_mplementStrStr.cs" />
+    <Compile Include="136_SingleNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

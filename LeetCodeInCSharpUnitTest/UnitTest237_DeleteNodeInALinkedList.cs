@@ -5,7 +5,7 @@ using LeetCodeSolutions;
 namespace LeetCodeTests
 {
     [TestClass]
-    public class UnitTest237DeleteNodeInALinkedList
+    public class UnitTest237_DeleteNodeInALinkedList
     {
         [TestMethod]
         public void TestMethodDeleteNode()

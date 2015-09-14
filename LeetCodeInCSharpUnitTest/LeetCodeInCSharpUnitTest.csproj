@@ -51,8 +51,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest237DeleteNodeInALinkedList.cs" />
-    <Compile Include="UnitTest28ImplementStrStr.cs" />
+    <Compile Include="UnitTest136_SingleNumber.cs" />
+    <Compile Include="UnitTest237_DeleteNodeInALinkedList.cs" />
+    <Compile Include="UnitTest28_ImplementStrStr.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LeetCodeInCSharp\LeetCodeInCSharp.csproj">

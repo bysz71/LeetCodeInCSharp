@@ -5,7 +5,7 @@ using LeetCodeSolutions;
 namespace LeetCodeTests
 {
     [TestClass]
-    public class UnitTest28ImplementStrStr
+    public class UnitTest28_ImplementStrStr
     {
         [TestMethod]
         public void TestMethodStrStr()
