@@ -13,9 +13,7 @@ twice except for one. Find that single one.
 **Difficulty**: 
 Medium  
 **Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
-**Runtime**: 
-156ms  
-
+**Runtime**: 156ms  
 **Explaination**:  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
@@ -45,7 +43,7 @@ Returns the index of the first occurrence of needle
 in haystack, or -1 if needle is not part of haystack.  
 **Difficulty**: 
 Easy  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs) 
+**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
 **Naive search runtime**: 136ms  
 **Rabin-Karp runtime**: 132ms  
 **Explaination**:  
