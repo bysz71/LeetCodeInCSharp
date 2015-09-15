@@ -12,7 +12,7 @@ Given an array of integers, every element appears
 twice except for one. Find that single one.  
 **Difficulty**: 
 Medium  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)
+**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
 **Runtime**: 
 156ms  
 
@@ -28,7 +28,7 @@ Supposed the linked list is 1 -> 2 -> 3 -> 4 and you
 are given the third node with value 3, the linked list 
 should become 1 -> 2 -> 4 after calling your function.  
 **Difficulty**: Easy  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)
+**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)  
 **Runtime**: 172ms  
 **Explaination**:  
 The list pointer is not provided, thus you cannot iterate through the list, and you are not given the previous ```next``` pointer. This problem needs an alternative way to delete the node.  
@@ -45,12 +45,12 @@ Returns the index of the first occurrence of needle
 in haystack, or -1 if needle is not part of haystack.  
 **Difficulty**: 
 Easy  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
+**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs) 
 **Naive search runtime**: 136ms  
 **Rabin-Karp runtime**: 132ms  
 **Explaination**:  
 There are multi-ways to solve this problem.  
-```Naive string search```:  
-Iterate through the ```haystack``` ```char``` by ```char```, if the ```char``` matches the first ```char``` in ```needle```, iterate through the following ```chars``` in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
-```Rabin-karp search```:  
+Naive string search:  
+Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
+Rabin-karp search:  
 
