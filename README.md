@@ -33,7 +33,6 @@ The list pointer is not provided, thus you cannot iterate through the list, and 
 ```
 ... ---> currentNodeToBeDeleted(node 0) ---> node1 ---> node2 ---> ...
 ```  
-Please refer to the structure above. Node 0 is the node we are given and to be deleted, node1 is its next node, node2 is node1's next node.
 To delete node0, copy the value of node1 to node0, change node0's ```next``` to point to node2.  
 Thus node0 now holds the properties of node1, and the node actually being discarded on the memory is node1.
 
