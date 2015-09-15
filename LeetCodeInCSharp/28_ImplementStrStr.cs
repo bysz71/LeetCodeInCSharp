@@ -39,52 +39,58 @@ namespace LeetCodeSolutions
 
         public static int StrStrRabinKarp(string haystack, string needle)
         {
-            if (haystack.Length < needle.Length) return -1;
+            int len = needle.Length;
+            //2 special case
+            if (haystack.Length < len) return -1;
             if (needle == "") return 0;
+        
+            //base prime number used for rabin-karp's hash function
+            int basement = 101;
+            //prime number used to scale down the hash value
+            int prime = 101;
+            //the factor used to multiply with the character to be removed from the hash
+            int factor = (int)(Math.Pow(basement, needle.Length - 1)) % prime;
+        
+            //get ascii value of the needle and the initial window
+            int needleHash = 0;
+            int windowHash = 0;
+            byte[] needleBytes = Encoding.ASCII.GetBytes(needle);
+            byte[] windowBytes = Encoding.ASCII.GetBytes(haystack.Substring(0, len));
 
-            var hashOfNeedle = Hash(needle);
-            string oldString = haystack.Substring(0, needle.Length);
-            int oldHash = Hash(oldString);
-            int newHash = 0;
-
-            if (hashOfNeedle == oldHash) return 0;
-
-            for (int i = 1; i < haystack.Length - needle.Length + 1; i++)
+            //generate hash value for both
+            for (int i = 0; i < needle.Length; i++)
             {
-                newHash = RollingHash(oldHash, oldString, haystack.Substring(i, needle.Length));
-                if (i == 107)
-                {
-                    Console.WriteLine("hash at 107:" + newHash);
-                    Console.WriteLine("newString:" + haystack.Substring(i, needle.Length));
-                    Console.WriteLine("needle hash:" + hashOfNeedle);
-                    //Console.WriteLine(newHash + hashOfNeedle);
+                needleHash = (needleHash * basement + needleBytes[i]) % prime;
+                windowHash = (windowHash * basement + windowBytes[i]) % prime;
+            }
+        
+            //loop to find match
+            bool findMatch = true;
+            for (int i = 0; i < haystack.Length - len + 1; i++){
+                //if hash value matches, incase the hash value are not uniq, iterate through needle and window
+                if(needleHash == windowHash){
+                    findMatch = true;
+                    for (int j = 0; j < len; j++)
+                    {
+                        if (needle[j] != haystack[i + j])
+                        {
+                            findMatch = false;
+                            break;
+                        }
+                    }
+                    if (findMatch == true) return i;
                 }
-                if (hashOfNeedle == newHash)
-                    return i;
-                else
-                {
-                    oldHash = newHash;
-                    oldString = haystack.Substring(i, needle.Length);
+                //move the sliding window and find the hash value for new window
+                if (i < haystack.Length - len){
+                    byte removeByte = Encoding.ASCII.GetBytes(haystack.Substring(i, 1))[0];
+                    byte addByte = Encoding.ASCII.GetBytes(haystack.Substring(i + len, 1))[0];
+                    //function of rolling hash
+                    windowHash = ((windowHash - removeByte * factor) * basement + addByte) % prime;
+                    //ensure the window hash to be positive
+                    if(windowHash < 0) windowHash += prime;
                 }
             }
             return -1;
-        }
-
-        public static int Hash(string txt)
-        {
-            int hash = 0;
-            byte[] asciiBytes = Encoding.ASCII.GetBytes(txt);
-            for (int i = 0; i < asciiBytes.Length; i++)
-                hash += (int)(asciiBytes[i] * Math.Pow(101, asciiBytes.Length - 1 - i));
-            return hash;
-        }
-
-        public static int RollingHash(int oldHash, string oldString, string newString)
-        {
-            int asciiHeadOfOldString = Encoding.ASCII.GetBytes(oldString.Substring(0, 1))[0];
-            int asciiTailOfNewString = Encoding.ASCII.GetBytes(newString.Substring(newString.Length - 1, 1))[0];
-            int newHash = (int)(oldHash - (int)(asciiHeadOfOldString * Math.Pow(101, oldString.Length - 1))) * 101 + asciiTailOfNewString;
-            return newHash;
         }
     }
 }

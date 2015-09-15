@@ -21,28 +21,6 @@ namespace LeetCodeTests
         }
 
         [TestMethod]
-        public void TestMethodHash()
-        {
-            string txt0 = "abc";
-            string txt1 = "";
-
-            var hash0 = ImplementStrStr.Hash(txt0);
-            var hash1 = ImplementStrStr.Hash(txt1);
-
-            Assert.AreEqual(999494, hash0);
-            Assert.AreEqual(0, hash1);
-        }
-
-        [TestMethod]
-        public void TestMethodRollingHash()
-        {
-            int oldHash = 999494;
-            string oldString = "abc";
-            string newString = "bcd";
-            Assert.AreEqual(ImplementStrStr.Hash(newString), ImplementStrStr.RollingHash(oldHash, oldString, newString));
-        }
-
-        [TestMethod]
         public void TestMethodStrStrRabinKarp()
         {
             string haystack = "abc def";
