@@ -43,14 +43,14 @@ namespace LeetCodeSolutions
             //2 special case
             if (haystack.Length < len) return -1;
             if (needle == "") return 0;
-        
+
             //base prime number used for rabin-karp's hash function
-            int basement = 101;
+            int basement = 256;
             //prime number used to scale down the hash value
-            int prime = 101;
+            int prime = 31;
             //the factor used to multiply with the character to be removed from the hash
-            int factor = (int)(Math.Pow(basement, needle.Length - 1)) % prime;
-        
+            int factor = (int)((Math.Pow(basement, needle.Length - 1)) % prime);
+
             //get ascii value of the needle and the initial window
             int needleHash = 0;
             int windowHash = 0;
@@ -63,12 +63,14 @@ namespace LeetCodeSolutions
                 needleHash = (needleHash * basement + needleBytes[i]) % prime;
                 windowHash = (windowHash * basement + windowBytes[i]) % prime;
             }
-        
+
             //loop to find match
             bool findMatch = true;
-            for (int i = 0; i < haystack.Length - len + 1; i++){
+            for (int i = 0; i < haystack.Length - len + 1; i++)
+            {
                 //if hash value matches, incase the hash value are not uniq, iterate through needle and window
-                if(needleHash == windowHash){
+                if (needleHash == windowHash)
+                {
                     findMatch = true;
                     for (int j = 0; j < len; j++)
                     {
@@ -81,13 +83,14 @@ namespace LeetCodeSolutions
                     if (findMatch == true) return i;
                 }
                 //move the sliding window and find the hash value for new window
-                if (i < haystack.Length - len){
+                if (i < haystack.Length - len)
+                {
                     byte removeByte = Encoding.ASCII.GetBytes(haystack.Substring(i, 1))[0];
                     byte addByte = Encoding.ASCII.GetBytes(haystack.Substring(i + len, 1))[0];
                     //function of rolling hash
                     windowHash = ((windowHash - removeByte * factor) * basement + addByte) % prime;
                     //ensure the window hash to be positive
-                    if(windowHash < 0) windowHash += prime;
+                    if (windowHash < 0) windowHash += prime;
                 }
             }
             return -1;
