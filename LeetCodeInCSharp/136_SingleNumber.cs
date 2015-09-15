@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Problem description:
+//Given an array of integers, every element appears 
+//twice except for one. Find that single one.
+
 namespace LeetCodeInCSharp
 {
     public class SingleNumberClass

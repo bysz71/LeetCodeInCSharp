@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="237_DeleteNodeInALinkedList.cs" />
-    <Compile Include="28I_mplementStrStr.cs" />
+    <Compile Include="28_ImplementStrStr.cs" />
     <Compile Include="136_SingleNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
