@@ -13,11 +13,25 @@ namespace LeetCodeInCSharp
 {
     public class AddDigitsSolution
     {
+        //O(1) way
         public static int AddDigits(int num)
         {
             return num - (int)((num - 1) / 9) * 9;
             //an alternative to write it
             //return num == 0 ? 0 : (num % 9 == 0 ? 9 : num % 9);
+        }
+
+        //recursive way
+        public static int AddDigitsRec(int num)
+        {
+            if (num < 10) return num;
+            int sum = 0;
+            while (num != 0)
+            {
+                sum += num % 10;
+                num /= 10;
+            }
+            return AddDigitsRec(sum);
         }
     }
 }
