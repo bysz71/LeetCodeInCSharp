@@ -1,13 +1,40 @@
 # LeetCodeInCSharp
 
 # List
-+ #136 Single number
-+ #237 Delete node in a linked list
 + #28 Implement strStr()
 + #104 Maximum depth of a binary tree
++ #136 Single number
++ #237 Delete node in a linked list
 + #258 Add digits
 
 # Detail
+## #28 Implement strStr()
+**Problem description**: 
+Returns the index of the first occurrence of needle 
+in haystack, or -1 if needle is not part of haystack.  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
+**Naive search runtime**: 136ms  
+**Rabin-Karp runtime**: 132ms  
+**Explaination**:  
+There are multi-ways to solve this problem.  
+- Naive string search:  
+Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
+- Rabin-karp search:  
+(To be explained)  
+
+## #104 Maximum depth of a binary tree
+**Problem description**: 
+Given a binary tree, find its maximum depth.  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
+**Recursive runtime**: 164ms  
+**Explaination**:  
+- Recursive way:  
+A very straightforward one line recursive solution.
+
 ## #136 Single number
 **Problem description**: 
 Given an array of integers, every element appears 
@@ -40,33 +67,6 @@ The list pointer is not provided, thus you cannot iterate through the list, and 
 To delete node0, copy the value of node1 to node0, change node0's ```next``` to point to node2.  
 Thus node0 now holds the properties of node1, and the node actually being discarded on the memory is node1.
 
-## #228 Implement strStr()
-**Problem description**: 
-Returns the index of the first occurrence of needle 
-in haystack, or -1 if needle is not part of haystack.  
-**Difficulty**: 
-Easy  
-**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
-**Naive search runtime**: 136ms  
-**Rabin-Karp runtime**: 132ms  
-**Explaination**:  
-There are multi-ways to solve this problem.  
-- Naive string search:  
-Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
-- Rabin-karp search:  
-(To be explained)  
-
-## #104 Maximum depth of a binary tree
-**Problem description**: 
-Given a binary tree, find its maximum depth.  
-**Difficulty**: 
-Easy  
-**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
-**Recursive runtime**: 164ms  
-**Explaination**:  
-- Recursive way:  
-A very straightforward one line recursive solution.
-
 ## #258 Add digits
 **Problem description**: 
 Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.  
@@ -92,10 +92,3 @@ while (n != 0) {
 }
 ```
 [[reference]](http://stackoverflow.com/questions/478968/sum-of-digits-in-c-sharp)  
-
-
-
-
-
-
-
