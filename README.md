@@ -21,8 +21,12 @@ Easy
 There are multi-ways to solve this problem.  
 - Naive string search:  
 Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
-- Rabin-karp search:  
+- Rabin-karp algorithm:  
 (To be explained)  
+- KMP algorithm:  
+(fork if you can implement)
+- Boyer- Moore algorithm:  
+(fork if you can implement)  
 
 ## #104 Maximum depth of a binary tree
 **Problem description**: 
