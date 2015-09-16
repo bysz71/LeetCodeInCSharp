@@ -54,7 +54,7 @@ Rabin-karp search:
 
 ## #104 Maximum depth of a binary tree
 **Problem description**: 
-Given a binary tree, find its maximum depth.
+Given a binary tree, find its maximum depth.  
 **Difficulty**: 
 Easy  
 **Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
