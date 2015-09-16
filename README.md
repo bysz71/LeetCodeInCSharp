@@ -83,7 +83,7 @@ In short words, "If a number produces a digital root of exactly 9, then the numb
 ```result = num - root((num - 1) / 9) * 9;```  
 - Recursive way:  
 Return the num if num < 10, else just calculate the sum and pass as parameter to itself.  
-Notice that you do not have to convert ```num``` to string, there is a simpler way:[[reference]](http://stackoverflow.com/questions/478968/sum-of-digits-in-c-sharp)  
+Notice that you do not have to convert ```num``` to string, there is a simpler way: [[reference]](http://stackoverflow.com/questions/478968/sum-of-digits-in-c-sharp)  
 ```sum = 0;
 while (n != 0) {
     sum += n % 10;
