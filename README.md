@@ -17,6 +17,7 @@ Medium
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
 **Runtime**: 156ms  
 **Explaination**:  
+- Bitwise XOR:  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
 
@@ -31,6 +32,7 @@ should become 1 -> 2 -> 4 after calling your function.
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)  
 **Runtime**: 172ms  
 **Explaination**:  
+- 2 line solution:  
 The list pointer is not provided, thus you cannot iterate through the list, and you are not given the previous ```next``` pointer. This problem needs an alternative way to delete the node.  
 ```
 ... ---> currentNodeToBeDeleted(node 0) ---> node1 ---> node2 ---> ...
@@ -49,9 +51,9 @@ Easy
 **Rabin-Karp runtime**: 132ms  
 **Explaination**:  
 There are multi-ways to solve this problem.  
-Naive string search:  
+- Naive string search:  
 Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
-Rabin-karp search:  
+- Rabin-karp search:  
 (...)  
 
 ## #104 Maximum depth of a binary tree
@@ -62,7 +64,7 @@ Easy
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
 **Recursive runtime**: 164ms  
 **Explaination**:  
-Recursive way:  
+- Recursive way:  
 A very straightforward one line recursive solution.
 
 ## #258 Add digits
@@ -75,11 +77,11 @@ Easy
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs)  
 **Recursive runtime**: 68ms  
 **Explaination**:  
-The best solution with O(1) time complexity:
+- The best solution with O(1) time complexity:  
 [[Wikipedia reference]](https://en.wikipedia.org/wiki/Digital_root)  
 In short words, "If a number produces a digital root of exactly 9, then the number is a multiple of 9."  
 ```result = num - root((num - 1) / 9) * 9;```  
-The recursive way:
+- Recursive way:  
 (to be implemented...)  
 
 
