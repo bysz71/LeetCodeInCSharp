@@ -4,6 +4,7 @@
 + #136 Single number
 + #237 Delete node in a linked list
 + #28 Implement strStr()
++ #104 Maximum depth of a binary tree
 
 # Detail
 ## #136 Single number
