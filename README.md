@@ -54,7 +54,7 @@ There are multi-ways to solve this problem.
 - Naive string search:  
 Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
 - Rabin-karp search:  
-(...)  
+(To be explained)  
 
 ## #104 Maximum depth of a binary tree
 **Problem description**: 
@@ -82,7 +82,19 @@ Easy
 In short words, "If a number produces a digital root of exactly 9, then the number is a multiple of 9."  
 ```result = num - root((num - 1) / 9) * 9;```  
 - Recursive way:  
-(to be implemented...)  
+Return the num if num < 10, else just calculate the sum and pass as parameter to itself.  
+Notice that you do not have to convert ```num``` to string, there is a simpler way:  
+```
+sum = 0;
+while (n != 0) {
+    sum += n % 10;
+    n /= 10;
+}
+```
+[[reference]](http://stackoverflow.com/questions/478968/sum-of-digits-in-c-sharp)  
+
+
+
 
 
 
