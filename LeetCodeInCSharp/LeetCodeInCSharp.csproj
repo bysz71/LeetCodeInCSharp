@@ -45,6 +45,7 @@
     <Compile Include="104_MaximumDepthOfABinaryTree.cs" />
     <Compile Include="258_AddDigits.cs" />
     <Compile Include="100_SameTree.cs" />
+    <Compile Include="122_BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
