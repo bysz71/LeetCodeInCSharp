@@ -51,8 +51,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="122_BestTimeToBuyAndSellStockII.cs" />
+    <Compile Include="UnitTest122_BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="UnitTest100_SameTree.cs" />
+    <Compile Include="UnitTest226_InverBinaryTree.cs" />
     <Compile Include="UnitTest258_AddDigits.cs" />
     <Compile Include="UnitTest104_MaximumDepthOfABinaryTree.cs" />
     <Compile Include="UnitTest136_SingleNumber.cs" />
