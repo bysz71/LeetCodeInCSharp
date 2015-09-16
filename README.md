@@ -36,7 +36,7 @@ The list pointer is not provided, thus you cannot iterate through the list, and 
 To delete node0, copy the value of node1 to node0, change node0's ```next``` to point to node2.  
 Thus node0 now holds the properties of node1, and the node actually being discarded on the memory is node1.
 
-## 228 Implement strStr()
+## #228 Implement strStr()
 **Problem description**: 
 Returns the index of the first occurrence of needle 
 in haystack, or -1 if needle is not part of haystack.  
