@@ -5,6 +5,7 @@
 + #237 Delete node in a linked list
 + #28 Implement strStr()
 + #104 Maximum depth of a binary tree
++ #258 Add digits
 
 # Detail
 ## #136 Single number
@@ -63,5 +64,24 @@ Easy
 **Explaination**:  
 Recursive way:  
 A very straightforward one line recursive solution.
+
+## #258 Add digits
+**Problem description**: 
+Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.  
+For example:  
+Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.  
+**Difficulty**: 
+Easy  
+**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs)  
+**Recursive runtime**: 68ms  
+**Explaination**:  
+The best solution with O(1) time complexity:
+[[Wikipedia reference]](https://en.wikipedia.org/wiki/Digital_root)  
+In short words, "If a number produces a digital root of exactly 9, then the number is a multiple of 9."  
+```result = num - root((num - 1) / 9) * 9;```  
+The recursive way:
+(to be implemented...)  
+
+
 
 
