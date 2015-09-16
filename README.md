@@ -33,7 +33,7 @@ Iterate through the ```haystack``` char by char, if the char matches the first c
 ## #100 Same tree
 **Problem description**: 
 Given two binary trees, write a function to check if they are equal or not. 
-Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/100_SameTree.cs)  
