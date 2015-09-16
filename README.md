@@ -59,7 +59,7 @@ Rabin-karp search:
 Given a binary tree, find its maximum depth.  
 **Difficulty**: 
 Easy  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
 **Recursive runtime**: 164ms  
 **Explaination**:  
 Recursive way:  
