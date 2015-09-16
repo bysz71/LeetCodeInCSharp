@@ -2,6 +2,7 @@
 
 # List
 + #28 Implement strStr()
++ #100 Same tree
 + #104 Maximum depth of a binary tree
 + #136 Single number
 + #237 Delete node in a linked list
@@ -27,6 +28,22 @@ Iterate through the ```haystack``` char by char, if the char matches the first c
 (fork if you can implement)
 - Boyer- Moore algorithm:  
 (fork if you can implement)  
+
+## #100 Same tree
+**Problem description**: 
+Given two binary trees, write a function to check if they are equal or not. 
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/100_SameTree.cs)  
+**Rruntime**: 160ms  
+**Explaination**:  
+- Recursive way:  
+A very straightforward one line recursive solution. 3 cases:  
+both null -> true;  
+one is null but the other is not -> false;  
+both not null but value not equal -> false;  
+else -> check children;  
 
 ## #104 Maximum depth of a binary tree
 **Problem description**: 
