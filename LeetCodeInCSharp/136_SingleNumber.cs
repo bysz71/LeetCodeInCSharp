@@ -15,6 +15,7 @@ namespace LeetCodeInCSharp
         public static int SingleNumber(int[] nums)
         {
             var answer = nums[0];
+            //use bitwise XOR to filter out the ones in pair
             for (int i = 1; i < nums.Length; i++)
                 answer ^= nums[i];
             return answer;
