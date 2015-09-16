@@ -50,4 +50,17 @@ There are multi-ways to solve this problem.
 Naive string search:  
 Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
 Rabin-karp search:  
+(...)  
+
+## #104 Maximum depth of a binary tree
+**Problem description**: 
+Given a binary tree, find its maximum depth.
+**Difficulty**: 
+Easy  
+**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
+**Recursive runtime**: 136ms  
+**Explaination**:  
+Recursive way:  
+A very straightforward one line recursive solution.
+
 
