@@ -16,6 +16,8 @@ namespace LeetCodeInCSharp
         public static int AddDigits(int num)
         {
             return num - (int)((num - 1) / 9) * 9;
+            //an alternative to write it
+            //return num == 0 ? 0 : (num % 9 == 0 ? 9 : num % 9);
         }
     }
 }
