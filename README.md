@@ -14,7 +14,7 @@ Given an array of integers, every element appears
 twice except for one. Find that single one.  
 **Difficulty**: 
 Medium  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
 **Runtime**: 156ms  
 **Explaination**:  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
@@ -28,7 +28,7 @@ Supposed the linked list is 1 -> 2 -> 3 -> 4 and you
 are given the third node with value 3, the linked list 
 should become 1 -> 2 -> 4 after calling your function.  
 **Difficulty**: Easy  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)  
 **Runtime**: 172ms  
 **Explaination**:  
 The list pointer is not provided, thus you cannot iterate through the list, and you are not given the previous ```next``` pointer. This problem needs an alternative way to delete the node.  
@@ -44,7 +44,7 @@ Returns the index of the first occurrence of needle
 in haystack, or -1 if needle is not part of haystack.  
 **Difficulty**: 
 Easy  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
 **Naive search runtime**: 136ms  
 **Rabin-Karp runtime**: 132ms  
 **Explaination**:  
@@ -72,7 +72,7 @@ For example:
 Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.  
 **Difficulty**: 
 Easy  
-**Code**: [code](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs)  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs)  
 **Recursive runtime**: 68ms  
 **Explaination**:  
 The best solution with O(1) time complexity:
