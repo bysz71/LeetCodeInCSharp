@@ -8,7 +8,7 @@ namespace LeetCodeInCSharpUnitTest
     public class UnitTest104_MaximumDepthOfABinaryTree
     {
         [TestMethod]
-        public void MaxDepth()
+        public void TestMethodMaxDepth()
         {
             var tree = new TreeNode(0);
             tree.left = new TreeNode(1);
