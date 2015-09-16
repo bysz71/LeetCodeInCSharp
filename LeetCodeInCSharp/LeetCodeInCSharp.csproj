@@ -42,6 +42,7 @@
     <Compile Include="237_DeleteNodeInALinkedList.cs" />
     <Compile Include="28_ImplementStrStr.cs" />
     <Compile Include="136_SingleNumber.cs" />
+    <Compile Include="104_MaximumDepthOfABinaryTree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
