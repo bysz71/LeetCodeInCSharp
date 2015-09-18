@@ -67,9 +67,9 @@ Given a binary tree, return the bottom-up level order traversal of its nodes' va
 Easy  
 **code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/107_LevelOrderBinaryTreeTraversalII.cs)  
 **Recursive runtime**: not known  
-**Explaination**:
-(To be solved!!)The solution did not pass LeetCode test #15 [1,2,3,4,null,null,5], the test seems having bug, asking on StackOverFlow now.  
-[[StackOverFlowLink]](https://stackoverflow.com/questions/32642809/binary-tree-serialization-bug-in-leetcode-107-binary-tree-level-order-traversal)  
+**Explaination**:  
+BFS solution:  
+Use a queue to do Breadth First Search. The way I did to check the level is creating a class called NodeWithHeight to wrap the TreeNode and a Height property. So every time instead of enqueueing a node into the queue, I wrap it and its height in a NodeWithHeight object, and  enqueue this object to the queue.  
 
 ## #122 Best time to buy and sell stack II
 **Problem description**: 
