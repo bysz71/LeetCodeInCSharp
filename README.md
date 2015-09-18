@@ -106,7 +106,7 @@ Easy
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/191_NumberOf1Bits.cs)  
 **Runtime**: 56ms  
 **Explanation**:  
-- Bitwise shift and modulo:
+- Bitwise shift and modulo:  
 do ```n % 2```, will actually return the LSB of n in binary. Add this value to the result, and shift ```n``` 1 bit to the right. Loop until ```n``` equals 0.
 
 ## #226 Invert binary tree
