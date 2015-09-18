@@ -21,7 +21,7 @@ Easy
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
 **Naive search runtime**: 136ms  
 **Rabin-Karp runtime**: 132ms  
-**Explaination**:  
+**Explanation**:  
 There are multi-ways to solve this problem.  
 - Naive string search:  
 Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
@@ -41,7 +41,7 @@ Two binary trees are considered equal if they are structurally identical and the
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/100_SameTree.cs)  
 **Rruntime**: 160ms  
-**Explaination**:  
+**Explanation**:  
 - Recursive way:  
 A very straightforward one line recursive solution. 3 cases:  
 both null -> true;  
@@ -56,7 +56,7 @@ Given a binary tree, find its maximum depth.
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
 **Recursive runtime**: 164ms  
-**Explaination**:  
+**Explanation**:  
 - Recursive way:  
 A very straightforward one line recursive solution.
 
@@ -67,7 +67,7 @@ Given a binary tree, return the bottom-up level order traversal of its nodes' va
 Easy  
 **code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/107_LevelOrderBinaryTreeTraversalII.cs)  
 **Recursive runtime**: not known  
-**Explaination**:  
+**Explanation**:  
 BFS solution:  
 Use a queue to do Breadth First Search. The way I did to check the level is creating a class called NodeWithHeight to wrap the TreeNode and a Height property. So every time instead of enqueueing a node into the queue, I wrap it and its height in a NodeWithHeight object, and  enqueue this object to the queue.  
 
@@ -79,7 +79,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/122_BestTimeToBuyAndSellStockII.cs)  
 **Runtime**: 148ms  
-**Explaination**:  
+**Explanation**:  
 - Iteration way:  
 The problem description is confusing. Actually what it says is to find the maximum profit per share of a stock. Just buy at low price day (compare to day + 1) and sell at (day + 1);
 
@@ -91,7 +91,7 @@ twice except for one. Find that single one.
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
 **Runtime**: 156ms  
-**Explaination**:  
+**Explanation**:  
 - Bitwise XOR:  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
@@ -103,7 +103,7 @@ Invert a binary tree.
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/226_InvertBinaryTree.cs)  
 **Runtime**: 160ms  
-**Explaination**:  
+**Explanation**:  
 - Recursive way:
 Feel sorry for Max Howell. I might get nervous too.
 
@@ -117,7 +117,7 @@ should become 1 -> 2 -> 4 after calling your function.
 **Difficulty**: Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)  
 **Runtime**: 172ms  
-**Explaination**:  
+**Explanation**:  
 - 2 line solution:  
 The list pointer is not provided, thus you cannot iterate through the list, and you are not given the previous ```next``` pointer. This problem needs an alternative way to delete the node.  
 ```... ---> currentNodeToBeDeleted(node 0) ---> node1 ---> node2 ---> ...```  
@@ -133,7 +133,7 @@ Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs)  
 **Recursive runtime**: 68ms  
-**Explaination**:  
+**Explanation**:  
 - The best solution with O(1) time complexity:  
 [[Wikipedia reference]](https://en.wikipedia.org/wiki/Digital_root)  
 In short words, "If a number produces a digital root of exactly 9, then the number is a multiple of 9."  
