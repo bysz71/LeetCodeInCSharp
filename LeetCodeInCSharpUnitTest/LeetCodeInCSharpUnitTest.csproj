@@ -54,6 +54,7 @@
     <Compile Include="UnitTest122_BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="UnitTest100_SameTree.cs" />
     <Compile Include="UnitTest107_LevelOrderBinaryTreeTraversalII.cs" />
+    <Compile Include="UnitTest191_NumberOf1Bits.cs" />
     <Compile Include="UnitTest226_InverBinaryTree.cs" />
     <Compile Include="UnitTest258_AddDigits.cs" />
     <Compile Include="UnitTest104_MaximumDepthOfABinaryTree.cs" />

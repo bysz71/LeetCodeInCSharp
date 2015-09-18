@@ -48,6 +48,7 @@
     <Compile Include="100_SameTree.cs" />
     <Compile Include="122_BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="107_LevelOrderBinaryTreeTraversalII.cs" />
+    <Compile Include="191_NumberOf1Bits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
