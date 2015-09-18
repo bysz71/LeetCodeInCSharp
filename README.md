@@ -7,6 +7,7 @@
 + #107 Level order binary tree traversal II
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
++ #191 Number of 1 bits
 + #226 Invert binary tree
 + #237 Delete node in a linked list
 + #258 Add digits
@@ -95,6 +96,18 @@ Medium
 - Bitwise XOR:  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
+
+## #191 Number of 1 bits
+**Problem description**: 
+Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+For example, the 32-bit integer '11' has binary representation 00000000000000000000000000001011, so the function should return 3.  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/191_NumberOf1Bits.cs)  
+**Runtime**: 56ms  
+**Explanation**:  
+- Bitwise shift and modulo:
+do ```n % 2```, will actually return the LSB of n in binary. Add this value to the result, and shift ```n``` 1 bit to the right. Loop until ```n``` equals 0.
 
 ## #226 Invert binary tree
 **Problem description**: 
