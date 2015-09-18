@@ -61,12 +61,12 @@ Easy
 A very straightforward one line recursive solution.
 
 ## #107 Level order binary tree traversal II  
-**Problem description**:  
+**Problem description**: 
 Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).  
-**Difficulty**:  
+**Difficulty**: 
 Easy  
 **code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/107_LevelOrderBinaryTreeTraversalII.cs)  
-**Recursive runtime**: 502ms
+**Recursive runtime**: 502ms  
 **Explanation**:  
 - BFS solution:  
 Use a queue to do Breadth First Search. The way I did to check the level is creating a class called NodeWithHeight to wrap the TreeNode and a Height property. So every time instead of enqueueing a node into the queue, I wrap it and its height in a NodeWithHeight object, and  enqueue this object to the queue.  
