@@ -13,35 +13,41 @@ namespace LeetCodeInCSharp
             if(root == null) return new List<IList<int>>();
 
             List<IList<int>> result = new List<IList<int>>();
-            List<int> pair = new List<int>();
-            var queue = new Queue<TreeNode>();
-
-            var temp = root;
+            List<int> level = new List<int>();
+            var queue = new Queue<NodeWithHeight>();
+            int height = 0;
+            var temp = new NodeWithHeight(root,height);
             queue.Enqueue(temp);
-            queue.Enqueue(new TreeNode(12345678));
-            while (queue.Count != 0)
-            {
+            while(queue.Count != 0){
                 temp = queue.Dequeue();
-                if (temp.val == 12345678)
+                if (temp.Height > height)
                 {
-                    if (pair.Count != 0)
-                    {
-                        result.Insert(0, pair);
-                        pair = new List<int>();
-                    }
-
+                    result.Insert(0, level);
+                    height = temp.Height;
+                    level = new List<int>();
+                    level.Add(temp.Node.val);
                 }
                 else
-                {
-                    pair.Add(temp.val);
-                    if (temp.left != null)
-                        queue.Enqueue(temp.left);
-                    if (temp.right != null)
-                        queue.Enqueue(temp.right);
-                    queue.Enqueue(new TreeNode(12345678));
-                }
+                    level.Add(temp.Node.val);
+                if (temp.Node.left != null)
+                    queue.Enqueue(new NodeWithHeight(temp.Node.left, temp.Height + 1));
+                if (temp.Node.right != null)
+                    queue.Enqueue(new NodeWithHeight(temp.Node.right, temp.Height + 1));
             }
+            if (level.Count != 0)
+                result.Insert(0, level);
             return result;
+        }
+    }
+
+    public class NodeWithHeight
+    {
+        public TreeNode Node{get; private set;}
+        public int Height { get; private set;}
+        public NodeWithHeight(TreeNode node, int height)
+        {
+            Node = node;
+            Height = height;
         }
     }
 }

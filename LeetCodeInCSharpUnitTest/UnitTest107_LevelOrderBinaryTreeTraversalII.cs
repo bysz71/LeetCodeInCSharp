@@ -22,10 +22,6 @@ namespace LeetCodeInCSharpUnitTest
             Assert.AreEqual(9, list[1][0]);
             Assert.AreEqual(20, list[1][1]);
             Assert.AreEqual(3, list[2][0]);
-
-            var tree2 = new TreeNode(1);
-            tree2.left = new TreeNode(2);
-            var list2 = LevelOrderBTTII.LevelOrderBottom(tree2);
         }
     }
 }
