@@ -4,6 +4,7 @@
 + #28 Implement strStr()
 + #100 Same tree
 + #104 Maximum depth of a binary tree
++ #107 Level order binary tree traversal II
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
 + #226 Invert binary tree
@@ -25,7 +26,8 @@ There are multi-ways to solve this problem.
 - Naive string search:  
 Iterate through the ```haystack``` char by char, if the char matches the first char in ```needle```, iterate through the following chars in the ```haystack``` with the length of ```needle``` to check match. This brute force search has time complexity of O(MN).  
 - Rabin-karp algorithm:  
-(To be explained)  
+(To be solved!!)Solution passed LeetCode test, but still confusing about the 'base' choice. Has asked on StackOverFlow.  
+[[StackOverFlowLink]](http://stackoverflow.com/questions/32576677/issue-with-implementing-rabin-karp-algorithm-to-search-string-in-leetcode-28-im)  
 - KMP algorithm:  
 (fork if you can implement)
 - Boyer- Moore algorithm:  
@@ -57,6 +59,17 @@ Easy
 **Explaination**:  
 - Recursive way:  
 A very straightforward one line recursive solution.
+
+## #107 Level order binary tree traversal II  
+**Problem description**:  
+Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).  
+**Difficulty**:  
+Easy  
+**code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/107_LevelOrderBinaryTreeTraversalII.cs)  
+**Recursive runtime**: not known  
+**Explaination**:  
+BFS solution:  
+Use a queue to do Breadth First Search. The way I did to check the level is creating a class called NodeWithHeight to wrap the TreeNode and a Height property. So every time instead of enqueueing a node into the queue, I wrap it and its height in a NodeWithHeight object, and  enqueue this object to the queue.  
 
 ## #122 Best time to buy and sell stack II
 **Problem description**: 
