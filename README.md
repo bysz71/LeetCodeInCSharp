@@ -114,7 +114,7 @@ Medium
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
 
-## #168 ExcelSheetColumnTitle
+## #168 Excel sheet column title
 **Problem description**: 
 Given a positive integer, return its corresponding column title as appear in an Excel sheet.  
 ```  
@@ -133,6 +133,30 @@ Easy
 **Explanation**:  
 - Modulo solution:  
 This problemm is actually converting a ```0``` started 10-scale system to a ```1``` started 26-scale system.  
+```number % 26``` gives a remainder to map character. ```'A'``` is #65 in the ASCII table. Thus use ```remainder + 65``` to map character in the ASCII table. 
+Because ```26 % 26``` leads to 0 which cannot used to map ```'Z'```, I used '0 - 25' instead of '1 - 26' to map 'A - Z'.
+Thus in every execution in the loop, do ```n--;``` at the begining.
+
+## #171 Excel sheet column number
+**Problem description**: 
+Given a column title as appear in an Excel sheet, return its corresponding column number.
+```  
+A -> 1
+B -> 2
+C -> 3
+...
+Z -> 26
+AA -> 27
+AB -> 28 
+```  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/171_ExcelSheetColumnNumber.cs)  
+**Runtime**: 164ms  
+**Explanation**:  
+- Common way:  
+Split string into charArray, iterate through, each item times corresbonding 26's power and add to the sum.
+
 
 
 ## #191 Number of 1 bits
