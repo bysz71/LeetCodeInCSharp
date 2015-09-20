@@ -56,6 +56,7 @@
     <Compile Include="UnitTest107_LevelOrderBinaryTreeTraversalII.cs" />
     <Compile Include="UnitTest191_NumberOf1Bits.cs" />
     <Compile Include="UnitTest168_ExcelSheetColumnTitle.cs" />
+    <Compile Include="UnitTest171_ExcelSheetColumnNumber.cs" />
     <Compile Include="UnitTest217_ContainsDuplicate.cs" />
     <Compile Include="UnitTest66_PlusOne.cs" />
     <Compile Include="UnitTest235_LowestCommonAncestorOfABinarySearchTree.cs" />

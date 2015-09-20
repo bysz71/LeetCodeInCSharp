@@ -11,13 +11,12 @@ namespace LeetCodeInCSharp
         public static string ConvertToTitle(int n)
         {
             string title = "";
-            n--;
-            while (n / 26 != 0)
+            while (n > 0)
             {
-                title = System.Text.Encoding.ASCII.GetString(new byte[] { (byte)(n % 26 + 65) }) + title;
-                n = n / 26 - 1;
+                n--;
+                title = System.Text.Encoding.ASCII.GetString(new byte[] { (byte)((n) % 26 + 65) }) + title;
+                n = n / 26;
             }
-            title = System.Text.Encoding.ASCII.GetString(new byte[] { (byte)(n % 26 + 65) }) + title;
             return title;
         }
     }

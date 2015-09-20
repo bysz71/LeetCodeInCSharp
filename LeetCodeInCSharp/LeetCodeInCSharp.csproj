@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="171_ExcelSheetColumnNumber.cs" />
     <Compile Include="226_InvertBinaryTree.cs" />
     <Compile Include="237_DeleteNodeInALinkedList.cs" />
     <Compile Include="28_ImplementStrStr.cs" />
