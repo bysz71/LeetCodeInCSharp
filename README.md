@@ -45,10 +45,8 @@ Easy
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/66_PlusOne.cs)  
 **Rruntime**: 500ms  
 **Explanation**:  
-- Simple iteration solution  
-Iterate through digits, from digits[length - 1] to digits[0]. If current number is not 9, the loop is not worth continueing, 
-thus just add 1 to it and break the loop, return digits; otherwise make current number 0 and continue. If nothing's returned 
-till now, means all digits are '9', thus create a new int array with length(digits_length + 1), and set newDigits[0] to 1;  
+- Simple iteration solution:  
+Iterate through ```digits```, from ```digits[digits.Length - 1]``` to ```digits[0]```. If current number is not 9, the loop is not worth continueing, thus just add ```1``` to it and break the loop, and return ```digits```; otherwise make current number ```0``` and continue. If nothing's returned after the loop, it means all digits are ```9```, thus create a new int array ```newDigits``` with ```Length = digits.Length + 1```, set ```newDigits[0]``` to ```1```, and return ```newDigits```.
 
 
 ## #100 Same tree
