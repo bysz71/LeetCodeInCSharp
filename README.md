@@ -9,6 +9,7 @@
 + #136 Single number
 + #191 Number of 1 bits
 + #226 Invert binary tree
++ #235 Lowest Common Ancestor of a Binary Search Tree
 + #237 Delete node in a linked list
 + #258 Add digits
 
@@ -119,6 +120,16 @@ Easy
 **Explanation**:  
 - Recursive way:
 Feel sorry for Max Howell. I might get nervous too.
+
+## #235 Lowest Common Ancestor of a Binary Search Tree
+**Problem description**: 
+Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.  
+**Difficulty**: Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/235_LowestCommonAncestorOfABinarySearchTree.cs)  
+**Runtime**: 188ms  
+**Explanation**:  
+- traversal solution:  
+To find the lowest common ancestor, it is actually looking for the first node that match the conditions that both (<=) than the small node and (>=) than the large node at the same time.
 
 ## #237 Delete node in a linked list
 **Problem description**: 
