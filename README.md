@@ -2,6 +2,7 @@
 
 # List
 + #28 Implement strStr()
++ #66 Plus One
 + #100 Same tree
 + #104 Maximum depth of a binary tree
 + #107 Level order binary tree traversal II
@@ -34,6 +35,21 @@ Iterate through the ```haystack``` char by char, if the char matches the first c
 (fork if you can implement)
 - Boyer- Moore algorithm:  
 (fork if you can implement)  
+
+## #66 Plus One
+**Problem description**: 
+Given a non-negative number represented as an array of digits, plus one to the number. 
+The digits are stored such that the most significant digit is at the head of the list.  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/66_PlusOne.cs)  
+**Rruntime**: 500ms  
+**Explanation**:  
+- Simple iteration solution
+Iterate through digits, from digits[length - 1] to digits[0]. If current number is not 9, the loop is not worth continueing, 
+thus just add 1 to it and break the loop, return digits; otherwise make current number 0 and continue. If nothing's returned 
+till now, means all digits are '9', thus create a new int array with length(digits_length + 1), and set newDigits[0] to 1;  
+
 
 ## #100 Same tree
 **Problem description**: 
