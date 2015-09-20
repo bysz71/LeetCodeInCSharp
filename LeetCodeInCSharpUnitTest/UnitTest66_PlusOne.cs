@@ -15,9 +15,8 @@ namespace LeetCodeInCSharpUnitTest
             var result1 = PlusOneSolution.PlusOne(test1);
             var result2 = PlusOneSolution.PlusOne(test2);
 
-            foreach (var result in result1) Console.Write(result + ";");
-            Console.WriteLine();
-            foreach (var result in result2) Console.Write(result + ";");
+            CollectionAssert.AreEqual(new int[] { 1, 0, 0, 0 }, result1);
+            CollectionAssert.AreEqual(new int[] { 1, 0, 2, 3, 4, 9, 0, 0, 0 }, result2);
         }
     }
 }
