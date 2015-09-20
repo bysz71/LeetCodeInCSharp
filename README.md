@@ -59,7 +59,7 @@ Easy
 **Rruntime**: 160ms  
 **Explanation**:  
 - Recursive way:  
-A very straightforward one line recursive solution. 3 cases:  
+A very straightforward one line recursive solution. 4 cases:  
 both null -> true;  
 one is null but the other is not -> false;  
 both not null but value not equal -> false;  
