@@ -8,6 +8,7 @@
 + #107 Level order binary tree traversal II
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
++ #141 Linked list cycle
 + #168 ExcelSheetColumnTitle
 + #191 Number of 1 bits
 + #217 Contains duplicate
@@ -113,6 +114,17 @@ Medium
 - Bitwise XOR:  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
+
+## #141 Linked list cycle
+**Problem description**: 
+Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?  
+**Difficulty**: 
+Medium  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/141_LinkedListCycle.cs)  
+**Runtime**: 156ms  
+**Explanation**:  
+- Best way so far I think, refer to [[huxijiuhao's solution]](https://leetcode.com/discuss/54343/simple-and-easy-understanding-java-solution-time-n-space-o-1):  
+The key to solve this problem is to find a way to track all visited nodes. Recording them causes extra space, the simpler way is to give all visited nodes an uniform feature. "huxijiuhao"'s solution modify all visited nodes' ```next``` pointer points to the ```head```, so during the traversal once you have node points to any of the nodes you visited, it will point to the ```head```. The time complexity is O(n), and space is O(1). (This solution breaks the linked list, but the question does not have any consideration on this, so this is all good)
 
 ## #168 Excel sheet column title
 **Problem description**: 
