@@ -8,6 +8,7 @@
 + #107 Level order binary tree traversal II
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
++ #168 ExcelSheetColumnTitle
 + #191 Number of 1 bits
 + #217 Contains duplicate
 + #226 Invert binary tree
@@ -112,6 +113,30 @@ Medium
 - Bitwise XOR:  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once, the time complexity is O(N).  
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
+
+## #168 ExcelSheetColumnTitle
+**Problem description**: 
+Given a positive integer, return its corresponding column title as appear in an Excel sheet.  
+```  
+A -> 1
+B -> 2
+C -> 3
+...
+Z -> 26
+AA -> 27
+AB -> 28 
+```  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/168_ExcelSheetColumnTitle.cs)  
+**Runtime**: 48ms  
+**Explanation**:  
+- Modulo solution:  
+```1 -> A , 26 -> Z , 27 -> AA , 52 -> AZ```  
+As you can see, it is a scale-26 system, and ```1 - 26``` is a digit range in here which is different in decimal ```0 - 9```. I am more comfortable with the decimmal system, thus firstly I minus ```n``` by 1, and the map should look like:   
+```0 -> A , 25 -> Z , 26 -> AA```  
+To me it is clearer. But an issue came out, ```1``` now maps to ```B```, and ```27``` will map to ```BA```. Thus we minus the division result by 1 every time in the loop.  
+
 
 ## #191 Number of 1 bits
 **Problem description**: 
