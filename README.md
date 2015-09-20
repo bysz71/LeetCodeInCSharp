@@ -9,6 +9,7 @@
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
 + #191 Number of 1 bits
++ #217 Contains duplicate
 + #226 Invert binary tree
 + #235 Lowest Common Ancestor of a Binary Search Tree
 + #237 Delete node in a linked list
@@ -123,6 +124,17 @@ Easy
 **Explanation**:  
 - Bitwise shift and modulo:  
 do ```n % 2```, will actually return the LSB of n in binary. Add this value to the result, and shift ```n``` 1 bit to the right. Loop until ```n``` equals 0.
+
+## #217 Contains duplicate
+**Problem description**: 
+Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/217_ContainsDuplicate.cs)  
+**Runtime**: 176ms  
+**Explanation**:  
+- Via hashset solution ( time complexity O(N)):  
+In C# .NET, 2 features of Hashset<type> are used this problem. 1st, each element in a hashset is unique, duplicate adding will return false; 2nd, the searching time complexity is O(1), thus the adding time complexity is O(1). To solve this problem, declare a ```Hashset<int> hashset```, iterate through the given ```nums``` and add each item to ```hashset```, return true if ```hashset.Add()``` returns false.   
 
 ## #226 Invert binary tree
 **Problem description**: 
