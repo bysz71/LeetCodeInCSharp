@@ -54,6 +54,7 @@
     <Compile Include="66_PlusOne.cs" />
     <Compile Include="217_ContainsDuplicate.cs" />
     <Compile Include="168_ExcelSheetColumnTitle.cs" />
+    <Compile Include="141_LinkedListCycle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
