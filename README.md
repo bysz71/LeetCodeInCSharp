@@ -132,10 +132,7 @@ Easy
 **Runtime**: 48ms  
 **Explanation**:  
 - Modulo solution:  
-```1 -> A , 26 -> Z , 27 -> AA , 52 -> AZ```  
-As you can see, it is a scale-26 system, and ```1 - 26``` is a digit range in here which is different in decimal ```0 - 9```. I am more comfortable with the decimmal system, thus firstly I minus ```n``` by 1, and the map should look like:   
-```0 -> A , 25 -> Z , 26 -> AA```  
-To me it is clearer. But an issue came out, ```1``` now maps to ```B```, and ```27``` will map to ```BA```. Thus we minus the division result by 1 every time in the loop.  
+This problemm is actually converting a ```0``` started 10-scale system to a ```1``` started 26-scale system.  
 
 
 ## #191 Number of 1 bits
