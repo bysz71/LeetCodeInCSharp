@@ -8,6 +8,7 @@ namespace LeetCodeInCSharp
 {
     public class InOrderTraversalSolution
     {
+        //recursive solution
         public static IList<int> InorderTraversal(TreeNode root)
         {
             var list = new List<int>();
@@ -17,6 +18,8 @@ namespace LeetCodeInCSharp
             list.AddRange(InorderTraversal(root.right));
             return list;
         }
+
+        //stack iteration solution
         public static IList<int> StackInorderTraversal(TreeNode root)
         {
             var list = new List<int>();
