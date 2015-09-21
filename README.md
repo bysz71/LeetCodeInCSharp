@@ -126,6 +126,37 @@ Medium
 - Best way so far I think, refer to [[huxijiuhao's solution]](https://leetcode.com/discuss/54343/simple-and-easy-understanding-java-solution-time-n-space-o-1):  
 The key to solve this problem is to find a way to track all visited nodes. Recording them causes extra space, the simpler way is to give all visited nodes an uniform feature. "huxijiuhao"'s solution modify all visited nodes' ```next``` pointer points to the ```head```, so during the traversal once you have node points to any of the nodes you visited, it will point to the ```head```. The time complexity is O(n), and space is O(1). (This solution breaks the linked list, but the question does not have any consideration on this, so this is all good)
 
+## #144 Binary tree pre-order traversal
+**Problem description**: 
+Given a binary tree, return the preorder traversal of its nodes' values. Note: Recursive solution is trivial, could you do it iteratively?  
+**Difficulty**: 
+Medium  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/144_BinaryTreePreOrderTraversal.cs)  
+**Recursion Runtime**: 508ms  
+**Iterating Runtime**: 520ms  
+**Explanation**:  
+- Recursion way:  
+```
+method preorder(root){
+    store root;
+    preorder(root.left);
+    preorder(root.right);
+}
+```
+- Stack solution:  
+```
+method preorder(root){
+    stack.push(root);
+    while(stack not empty){
+        temp = stack.pop;
+        list.add(temp);
+        stack.push(temp.right);
+        stack.push(temp.left);
+    }
+    return list;
+}
+```
+
 ## #168 Excel sheet column title
 **Problem description**: 
 Given a positive integer, return its corresponding column title as appear in an Excel sheet.  
