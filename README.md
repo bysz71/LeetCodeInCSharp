@@ -3,6 +3,7 @@
 # List
 + #28 Implement strStr()
 + #66 Plus One
++ #94 Binary tree in-order traversal
 + #100 Same tree
 + #104 Maximum depth of a binary tree
 + #107 Level order binary tree traversal II
@@ -51,6 +52,40 @@ Easy
 **Explanation**:  
 - Simple iteration solution:  
 Iterate through ```digits```, from ```digits[digits.Length - 1]``` to ```digits[0]```. If current number is not 9, the loop is not worth continueing, thus just add ```1``` to it and break the loop, and return ```digits```; otherwise make current number ```0``` and continue. If nothing's returned after the loop, it means all digits are ```9```, thus create a new int array ```newDigits``` with ```Length = digits.Length + 1```, set ```newDigits[0]``` to ```1```, and return ```newDigits```.
+
+## #94 Binary tree in-order traversal
+**Problem description**: 
+Given a binary tree, return the inorder traversal of its nodes' values. Note: Recursive solution is trivial, could you do it iteratively?  
+**Difficulty**: 
+Medium  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/94_BinaryTreeInOrderTraversal.cs)  
+**Runtime**: 524ms  
+**Explanation**:  
+- Recursive way:  
+```
+method inorder(root){
+    inorder(root.left);
+    store root;
+    inorder(root.right);
+}
+```
+- Stack solution:  
+This is an iteration solution via stack. 
+```
+        root
+        /\
+       /\
+      /\
+      subtree1
+       /
+      /\
+      subtree2
+       /
+      /
+```
+It treats every right child as a start of a subtree. It stores a subtree in stack, deals with it, and then track back to the latest node with right node, and goes into this subtree and deal with it. Well this is hard to explain clearly :(.
+- Morris traversal  
+Seems to be the best iteration solution, to be implemented.
 
 
 ## #100 Same tree
