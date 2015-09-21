@@ -57,6 +57,7 @@
     <Compile Include="141_LinkedListCycle.cs" />
     <Compile Include="144_BinaryTreePreOrderTraversal.cs" />
     <Compile Include="94_BinaryTreeInOrderTraversal.cs" />
+    <Compile Include="283_MoveZeroes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
