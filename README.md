@@ -9,6 +9,7 @@
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
 + #141 Linked list cycle
++ #144 Binary tree pre-order traversal
 + #168 ExcelSheetColumnTitle
 + #191 Number of 1 bits
 + #217 Contains duplicate
