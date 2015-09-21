@@ -18,6 +18,7 @@
 + #235 Lowest Common Ancestor of a Binary Search Tree
 + #237 Delete node in a linked list
 + #258 Add digits
++ #283 Move Zeroes
 
 # Detail
 ## #28 Implement strStr()
@@ -321,3 +322,13 @@ while (n != 0) {
     sum += n % 10;
     n /= 10;
 }```
+
+## #283 Move Zeroes
+**Problem description**: 
+Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].  
+**Difficulty**: Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/283_MoveZeroes.cs)  
+**Runtime**: 492ms  
+**Explanation**:  
+- Iteration way, refer to [[fetoyal's solution]](https://leetcode.com/discuss/59355/3-lines-o-1-space-o-n-time-c):  
+Iterate through to find none-zero number and move to the front. Thanks to fetoyal's brillient solution.
