@@ -18,6 +18,7 @@
 + #235 Lowest Common Ancestor of a Binary Search Tree
 + #237 Delete node in a linked list
 + #258 Add digits
++ #260 Single number III
 + #283 Move Zeroes
 
 # Detail
@@ -322,6 +323,26 @@ while (n != 0) {
     sum += n % 10;
     n /= 10;
 }```
+
+## #260 Single number III
+**Problem description**: 
+Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. 
+For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
+**Difficulty**: 
+Medium  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/260_SingleNumberIII.cs)  
+**Recursive runtime**: 564ms  
+**Explanation**:  
+- Bitwise way:  
+    1. Get the bitwise XOR result of the array.  
+    For the numbers in pair, the XOR result will be 0. Thus after doing XOR one by one for the whole array, the result will be the XOR of the 2 single numbers, assume it's called ```aXORb```.
+    2. Get the last set bit of the ```aXORb```.  
+    Because a and b are distinct, ```aXORb``` will have at least 1 bit is set (is 1). We need to find one of the set bit.  
+    Why? Because at this specific bit, one of ```a``` and ```b``` would be 1 (let's say ```a```), and the other must be 0 (let's say ```b```), and use this feature we could group up all the numbers in the array into 2 groups.
+    One of this group will all have this bit set to 1 (let's say group ```a```), and the other group will all have this bit set to 0 (let's say group ```b```). The number of numbers in each group does not matter, because we will do XOR for each group, and the ones in pairs will all end up to 0, the only one left of group a will be a, and the only one left of group b will be b.  
+    How? ```int lastSetBit = aXORb & (-aXORb)``` can be used to find the last set bit. In C# ```int``` uses 2's complment (I suppose so, correct me if wrong) for negative number. For example, ```3``` would be ```0011``` in binary, and ```-3``` would be ```1101```, that ```0011 XOR 1101``` leads to ```0001```, which is the last set bit.
+    3. Group numbers into 2 groups.  
+    Iterate through the array, check condition ```(number & lastSetBit) == 0``` to group up, and XOR through each group, you will finally get a and b.
 
 ## #283 Move Zeroes
 **Problem description**: 
