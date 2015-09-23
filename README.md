@@ -7,6 +7,7 @@
 + #100 Same tree
 + #104 Maximum depth of a binary tree
 + #107 Level order binary tree traversal II
++ #116 Populating next right pointers in each node
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
 + #141 Linked list cycle
@@ -127,6 +128,29 @@ Easy
 **Explanation**:  
 - BFS solution:  
 Use a queue to do Breadth First Search. The way I did to check the level is creating a class called NodeWithHeight to wrap the TreeNode and a Height property. So every time instead of enqueueing a node into the queue, I wrap it and its height in a NodeWithHeight object, and  enqueue this object to the queue.  
+
+## #116 Populating next right pointers in each node
+**Problem description**: 
+Given a binary tree:  
+```
+    struct TreeLinkNode {
+        TreeLinkNode *left;
+        TreeLinkNode *right;
+        TreeLinkNode *next;
+    }
+```
+Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL. Note: You may only use constant extra space; You may assume that it is a perfect binary tree (ie, all leaves are at the same level, and every parent has two children).  
+**Difficulty**: 
+Medium  
+**code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/116_PopulatingNextRightPointersInEachNode.cs)  
+**Runtime**: 200ms  
+**Explanation**:  
+- BFS queue solution and DFS recursive solution:  
+Both ways are straight forward. The simple logic they both use are:  
+```
+if(root.left != null) root.left.next = root.right;
+if(root.right != null && root.next != null) root.right.next = root.next.left;
+```
 
 ## #122 Best time to buy and sell stack II
 **Problem description**: 
