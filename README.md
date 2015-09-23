@@ -13,6 +13,7 @@
 + #141 Linked list cycle
 + #144 Binary tree pre-order traversal
 + #168 ExcelSheetColumnTitle
++ #169 Majority element
 + #191 Number of 1 bits
 + #217 Contains duplicate
 + #226 Invert binary tree
@@ -241,6 +242,19 @@ This problemm is actually converting a ```0``` started 10-scale system to a ```1
 ```number % 26``` gives a remainder to map character. ```'A'``` is #65 in the ASCII table. Thus use ```remainder + 65``` to map character in the ASCII table. 
 Because ```26 % 26``` leads to 0 which cannot used to map ```'Z'```, I used '0 - 25' instead of '1 - 26' to map 'A - Z'.
 Thus in every execution in the loop, do ```n--;``` at the begining.
+
+## #169 Majority element
+**Problem description**: 
+Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. You may assume that the array is non-empty and the majority element always exist in the array.  
+**Difficulty**: 
+Easy  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/169_MajorityElement.cs)  
+**Runtime**: 152ms  
+**Explanation**:  
+- Sorting 2-line solution:  
+Sort the array first, no matter if the majority items are larger or small, simply pick the item in the middle ((n/2 + 1)th item if even numbers). Since the C# ```Array.Sort()``` uses quicksort algorithm, the time complexity would be O(nlogn).  
+- Iteration solution, refer to [[andy-sheng's solution]](https://leetcode.com/discuss/45660/my-o-n-time-and-o-1-space-solution-in-c)  
+This method provides O(n) time complexity.
 
 ## #171 Excel sheet column number
 **Problem description**: 
