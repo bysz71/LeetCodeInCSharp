@@ -59,6 +59,7 @@
     <Compile Include="94_BinaryTreeInOrderTraversal.cs" />
     <Compile Include="283_MoveZeroes.cs" />
     <Compile Include="260_SingleNumberIII.cs" />
+    <Compile Include="116_PopulatingNextRightPointersInEachNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

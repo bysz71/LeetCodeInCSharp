@@ -59,6 +59,7 @@
     <Compile Include="UnitTest171_ExcelSheetColumnNumber.cs" />
     <Compile Include="UnitTest141_LinkedListCycle.cs" />
     <Compile Include="UnitTest144_BinaryTreePreOrderTraversal.cs" />
+    <Compile Include="UnitTest116_PopulatingNextRightPointersInEachNode.cs" />
     <Compile Include="UnitTest260_SingleNumberIII.cs" />
     <Compile Include="UnitTest283_MoveZeroes.cs" />
     <Compile Include="UnitTest94_BinaryTreeInOrderTraversal.cs" />
