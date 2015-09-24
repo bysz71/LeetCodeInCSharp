@@ -28,6 +28,7 @@
 **Problem description**: 
 Returns the index of the first occurrence of needle 
 in haystack, or -1 if needle is not part of haystack.  
+**Problem Link**: [https://leetcode.com/problems/implement-strstr/](https://leetcode.com/problems/implement-strstr/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
@@ -49,6 +50,7 @@ Iterate through the ```haystack``` char by char, if the char matches the first c
 **Problem description**: 
 Given a non-negative number represented as an array of digits, plus one to the number. 
 The digits are stored such that the most significant digit is at the head of the list.  
+**Problem Link**: [https://leetcode.com/problems/plus-one/](https://leetcode.com/problems/plus-one/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/66_PlusOne.cs)  
@@ -60,6 +62,7 @@ Iterate through ```digits```, from ```digits[digits.Length - 1]``` to ```digits[
 ## #94 Binary tree in-order traversal
 **Problem description**: 
 Given a binary tree, return the inorder traversal of its nodes' values. Note: Recursive solution is trivial, could you do it iteratively?  
+**Problem Link**: [https://leetcode.com/problems/binary-tree-inorder-traversal/](https://leetcode.com/problems/binary-tree-inorder-traversal/)  
 **Difficulty**: 
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/94_BinaryTreeInOrderTraversal.cs)  
@@ -96,6 +99,7 @@ Seems to be the best iteration solution, to be implemented.
 **Problem description**: 
 Given two binary trees, write a function to check if they are equal or not. 
 Two binary trees are considered equal if they are structurally identical and the nodes have the same value.  
+**Problem Link**: [https://leetcode.com/problems/same-tree/](https://leetcode.com/problems/same-tree/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/100_SameTree.cs)  
@@ -111,6 +115,7 @@ else -> check children;
 ## #104 Maximum depth of a binary tree
 **Problem description**: 
 Given a binary tree, find its maximum depth.  
+**Problem Link**: [https://leetcode.com/problems/maximum-depth-of-binary-tree/](https://leetcode.com/problems/maximum-depth-of-binary-tree/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
@@ -122,6 +127,7 @@ A very straightforward one line recursive solution.
 ## #107 Level order binary tree traversal II  
 **Problem description**: 
 Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).  
+**Problem Link**: [https://leetcode.com/problems/binary-tree-level-order-traversal-ii/](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)  
 **Difficulty**: 
 Easy  
 **code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/107_LevelOrderBinaryTreeTraversalII.cs)  
@@ -141,6 +147,7 @@ Given a binary tree:
     }
 ```
 Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL. Note: You may only use constant extra space; You may assume that it is a perfect binary tree (ie, all leaves are at the same level, and every parent has two children).  
+**Problem Link**: [https://leetcode.com/problems/populating-next-right-pointers-in-each-node/](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)  
 **Difficulty**: 
 Medium  
 **code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/116_PopulatingNextRightPointersInEachNode.cs)  
@@ -157,6 +164,7 @@ if(root.right != null && root.next != null) root.right.next = root.next.left;
 **Problem description**: 
 Say you have an array for which the ith element is the price of a given stock on day i.  
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).  
+**Problem Link**: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)  
 **Difficulty**: 
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/122_BestTimeToBuyAndSellStockII.cs)  
@@ -169,6 +177,7 @@ The problem description is confusing. Actually what it says is to find the maxim
 **Problem description**: 
 Given an array of integers, every element appears 
 twice except for one. Find that single one.  
+**Problem Link**: [https://leetcode.com/problems/single-number/](https://leetcode.com/problems/single-number/)  
 **Difficulty**: 
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
@@ -181,6 +190,7 @@ This solution uses 'bitwise XOR' to quickly solve the problem, each element in t
 ## #141 Linked list cycle
 **Problem description**: 
 Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?  
+**Problem Link**: [https://leetcode.com/problems/linked-list-cycle/](https://leetcode.com/problems/linked-list-cycle/)  
 **Difficulty**: 
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/141_LinkedListCycle.cs)  
@@ -192,6 +202,7 @@ The key to solve this problem is to find a way to track all visited nodes. Recor
 ## #144 Binary tree pre-order traversal
 **Problem description**: 
 Given a binary tree, return the preorder traversal of its nodes' values. Note: Recursive solution is trivial, could you do it iteratively?  
+**Problem Link**: [https://leetcode.com/problems/binary-tree-preorder-traversal/](https://leetcode.com/problems/binary-tree-preorder-traversal/)  
 **Difficulty**: 
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/144_BinaryTreePreOrderTraversal.cs)  
@@ -232,6 +243,7 @@ Z -> 26
 AA -> 27
 AB -> 28 
 ```  
+**Problem Link**: [https://leetcode.com/problems/excel-sheet-column-title/](https://leetcode.com/problems/excel-sheet-column-title/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/168_ExcelSheetColumnTitle.cs)  
@@ -246,6 +258,7 @@ Thus in every execution in the loop, do ```n--;``` at the begining.
 ## #169 Majority element
 **Problem description**: 
 Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. You may assume that the array is non-empty and the majority element always exist in the array.  
+**Problem Link**: [https://leetcode.com/problems/majority-element/](https://leetcode.com/problems/majority-element/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/169_MajorityElement.cs)  
@@ -268,6 +281,7 @@ Z -> 26
 AA -> 27
 AB -> 28 
 ```  
+**Problem Link**: [https://leetcode.com/problems/excel-sheet-column-number/](https://leetcode.com/problems/excel-sheet-column-number/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/171_ExcelSheetColumnNumber.cs)  
@@ -282,6 +296,7 @@ Split string into charArray, iterate through, each item times corresbonding 26's
 **Problem description**: 
 Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
 For example, the 32-bit integer '11' has binary representation 00000000000000000000000000001011, so the function should return 3.  
+**Problem Link**: [https://leetcode.com/problems/number-of-1-bits/](https://leetcode.com/problems/number-of-1-bits/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/191_NumberOf1Bits.cs)  
@@ -293,6 +308,7 @@ do ```n % 2```, will actually return the LSB of n in binary. Add this value to t
 ## #217 Contains duplicate
 **Problem description**: 
 Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.  
+**Problem Link**: [https://leetcode.com/problems/contains-duplicate/](https://leetcode.com/problems/contains-duplicate/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/217_ContainsDuplicate.cs)  
@@ -304,6 +320,7 @@ In C# .NET, 2 features of Hashset<type> are used this problem. 1st, each element
 ## #226 Invert binary tree
 **Problem description**: 
 Invert a binary tree.  
+**Problem Link**: [https://leetcode.com/problems/invert-binary-tree/](https://leetcode.com/problems/invert-binary-tree/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/226_InvertBinaryTree.cs)  
@@ -315,6 +332,7 @@ Feel sorry for Max Howell. I might get nervous too.
 ## #235 Lowest Common Ancestor of a Binary Search Tree
 **Problem description**: 
 Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.  
+**Problem Link**: [https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)  
 **Difficulty**: Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/235_LowestCommonAncestorOfABinarySearchTree.cs)  
 **Runtime**: 188ms  
@@ -329,6 +347,7 @@ in a singly linked list, given only access to that node.
 Supposed the linked list is 1 -> 2 -> 3 -> 4 and you 
 are given the third node with value 3, the linked list 
 should become 1 -> 2 -> 4 after calling your function.  
+**Problem Link**: [https://leetcode.com/problems/delete-node-in-a-linked-list/](https://leetcode.com/problems/delete-node-in-a-linked-list/)  
 **Difficulty**: Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)  
 **Runtime**: 172ms  
@@ -344,6 +363,7 @@ Thus node0 now holds the properties of node1, and the node actually being discar
 Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.  
 For example:  
 Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.  
+**Problem Link**: [https://leetcode.com/problems/add-digits/](https://leetcode.com/problems/add-digits/)  
 **Difficulty**: 
 Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs)  
@@ -366,6 +386,7 @@ while (n != 0) {
 **Problem description**: 
 Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. 
 For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].  
+**Problem Link**: [https://leetcode.com/problems/single-number-iii/](https://leetcode.com/problems/single-number-iii/)  
 **Difficulty**: 
 Medium  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/260_SingleNumberIII.cs)  
@@ -385,6 +406,7 @@ Medium
 ## #283 Move Zeroes
 **Problem description**: 
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].  
+**Problem Link**: [https://leetcode.com/problems/move-zeroes/](https://leetcode.com/problems/move-zeroes/)  
 **Difficulty**: Easy  
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/283_MoveZeroes.cs)  
 **Runtime**: 492ms  
