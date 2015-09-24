@@ -15,12 +15,11 @@ namespace LeetCodeInCSharp
         /// <returns></returns>
         public static IList<int> PreorderTraversal(TreeNode root)
         {
-            var list = new List<int>();
-            if (root == null) return list;
-            list.Add(root.val);
-            list.AddRange(PreorderTraversal(root.left));
-            list.AddRange(PreorderTraversal(root.right));
-            return list;
+            if (root == null) return new List<int>();
+            else return new List<int>() { root.val }
+                    .Concat(PreorderTraversal(root.left))
+                    .Concat(PreorderTraversal(root.right))
+                    .ToList();
         }
 
         /// <summary>
@@ -38,10 +37,8 @@ namespace LeetCodeInCSharp
             {
                 temp = stack.Pop();
                 list.Add(temp.val);
-                if(temp.right != null)
-                    stack.Push(temp.right);
-                if(temp.left != null)
-                    stack.Push(temp.left);
+                if(temp.right != null) stack.Push(temp.right);
+                if(temp.left != null) stack.Push(temp.left);
             }
             return list;
         }
