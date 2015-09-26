@@ -61,11 +61,11 @@ Medium
 **Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/35_SearchInsertPosition.cs) 
 **Explanation**:  
 - Linear search solution (Time: O(n), 164ms): 
-    ```
-    for (int i = 0; i < nums.Length; i++)
-        if (target <= nums[i]) return i;
-    return nums.Length;
-    ```
+```
+for (int i = 0; i < nums.Length; i++)
+    if (target <= nums[i]) return i;
+return nums.Length;
+```
 - Binary search solution (Time: O(log(n)), 156ms):  
 Loop until ```low == high```(return exact match if there is), if```target > nums[high]```, return ```high + 1```, else return ```high```.
 
