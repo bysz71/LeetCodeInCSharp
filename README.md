@@ -22,6 +22,7 @@
 + #235 Lowest Common Ancestor of a Binary Search Tree
 + #237 Delete node in a linked list
 + #238 Product of array except self
++ #242 Valid anagram
 + #258 Add digits
 + #260 Single number III
 + #283 Move Zeroes
@@ -404,6 +405,29 @@ Given an array of n integers where n > 1, nums, return an array output such that
 **Explanation**:  
 - The best solution so far (512ms), refer to [[areshead's solution]](https://leetcode.com/discuss/53781/my-solution-beats-100%25-java-solutions)  :
 What it does is to iterate through the ```nums``` array twice. Firstly set ```pre``` and ```post``` to 1, they are the product before ```(i)th``` item and product after ```(i)th``` item. In the first loop, iterate through ```nums``` incrementally, set ```result[i]``` to ```pre``` and then update the ```pre``` by ```pre *= nums[i]```. In the second loop, iterate through ```nums``` decrementally, update ```result[i]``` by ```result[i] *= post``` and then update ```post``` by ```post *= nums[i]```.  
+
+## #242 Valid anagram
+**LeekCode Link**:  
+[https://leetcode.com/problems/valid-anagram/](https://leetcode.com/problems/valid-anagram/)  
+**Problem description**:  
+Given two strings s and t, write a function to determine if t is an anagram of s.  
+For example,  
+s = "anagram", t = "nagaram", return true.  
+s = "rat", t = "car", return false.  
+**Source code**:  
+[https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/242_ValidAnagram.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/242_ValidAnagram.cs)  
+**Detail**:  
+- sorting solution:  
+Alphabetically sort each string, and commpare them. This method is relatively slow, each sorting (quick sort) has O(nlogn) time complexity.To sort a string:  
+```
+char[] a = s.ToCharArray();
+Array.Sort(a);
+return new string(a);
+```
+
+- an O(n) solution (132ms), refer to [零一's solution](https://leetcode.com/discuss/57355/0ms-c-solution-o-n-time):  
+Declare an int array ```alphabet``` with 26 Length, that each one related to an character in the alphabet table.  Iterate through the 1st string, ++ the value at the corresbonding slot in ```alphabet```, then iterate through the 2nd string, -- the value at the corresbonding slot in ```alphabet```, after this, if the value of each slot in ```alphabet``` is 0, then return true, otherwise return false.
+
 
 ## #258 Add digits
 **LeekCode Link**:  
