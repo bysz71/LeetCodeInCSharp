@@ -12,6 +12,7 @@
 + #116 Populating next right pointers in each node
 + #122 Best Time to Buy and Sell Stock II
 + #136 Single number
++ #137 Single number II
 + #141 Linked list cycle
 + #144 Binary tree pre-order traversal
 + #168 ExcelSheetColumnTitle
@@ -230,10 +231,21 @@ Given an array of integers, every element appears
 twice except for one. Find that single one.  
 **Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
-**Explanation**:  
+**Detail**:  
 - Bitwise XOR (156ms, O(n)):  
 This solution uses 'bitwise XOR' to quickly solve the problem, each element in the array only needs to be checked once.
 ```^``` is the bitwise XOR in C#. For bitwise XOR: (0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0). Thus the ones are not single will offset each other, only the single number will live to the end.
+
+## #137 Single number II
+**LeetCode Link**:  
+[https://leetcode.com/problems/single-number-ii/](https://leetcode.com/problems/single-number-ii/)  
+**Problem description**:  
+Given an array of integers, every element appears three times except for one. Find that single one.  
+**Source code**:  
+[https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/137_SingleNumberII.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/137_SingleNumberII.cs)  
+**Explanation**:  
+- Dictionary solution (152ms):  
+Declare a ```Dictionary<int , int>```, iterate through ```nums```, add a new ```KeyValuePair``` which ```key``` is current ```num``` and ```value``` is ```1``` to it if the number is met in the first time, or ```value ++``` if the key already exists. Then iterate through the dictionary to find the one with ```value == 1```.
 
 ## #141 Linked list cycle
 **LeetCode Link**:  
