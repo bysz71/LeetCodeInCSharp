@@ -61,6 +61,7 @@
     <Compile Include="UnitTest144_BinaryTreePreOrderTraversal.cs" />
     <Compile Include="UnitTest116_PopulatingNextRightPointersInEachNode.cs" />
     <Compile Include="UnitTest169_MajorityElement.cs" />
+    <Compile Include="UnitTest137_SingleNumberII.cs" />
     <Compile Include="UnitTest242_ValidAnagram.cs" />
     <Compile Include="UnitTest96_UniqueBinarySearchTrees.cs" />
     <Compile Include="UnitTest35_SearchInsertPosition.cs" />
