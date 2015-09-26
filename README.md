@@ -34,7 +34,7 @@
 Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/28_ImplementStrStr.cs)  
 **Explanation**:  
 - Naive string search (136ms):  
@@ -60,7 +60,7 @@ Given a sorted array and a target value, return the index if the target is found
 ```
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/35_SearchInsertPosition.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/35_SearchInsertPosition.cs)  
 **Explanation**:  
 - Linear search solution (Time: O(n), 164ms): 
@@ -80,7 +80,7 @@ Given a non-negative number represented as an array of digits, plus one to the n
 The digits are stored such that the most significant digit is at the head of the list.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/66_PlusOne.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/66_PlusOne.cs)  
 **Explanation**:  
 - Simple iteration solution(500ms):  
@@ -93,7 +93,7 @@ Iterate through ```digits```, from ```digits[digits.Length - 1]``` to ```digits[
 Given a binary tree, return the inorder traversal of its nodes' values. Note: Recursive solution is trivial, could you do it iteratively?  
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/94_BinaryTreeInOrderTraversal.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/94_BinaryTreeInOrderTraversal.cs)  
 **Explanation**:  
 - Recursive way (524ms):  
@@ -137,7 +137,7 @@ For example, Given n = 3, there are a total of 5 unique BST's.
 ```
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/96_UniqueBinarySearchTrees.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/96_UniqueBinarySearchTrees.cs)  
 **Detail**:  
 - Iteration way(52ms), refer to [rain4's solution](https://leetcode.com/discuss/55761/c%23-accepted-52ms-based-on-the-quora-answer) and [Mohit modi's explanation](https://www.quora.com/Given-n-how-many-structurally-unique-BSTs-binary-search-trees-that-store-values-1-to-n-are-there):  
@@ -167,7 +167,7 @@ Given two binary trees, write a function to check if they are equal or not.
 Two binary trees are considered equal if they are structurally identical and the nodes have the same value.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/100_SameTree.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/100_SameTree.cs)  
 **Explanation**:  
 - Recursive way (160ms):  
@@ -184,7 +184,7 @@ else -> check children;
 Given a binary tree, find its maximum depth.  
 **Difficulty**:  
 Easy  
-**Code**: [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
+**Source code**: [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/104_MaximumDepthOfABinaryTree.cs)  
 **Explanation**:  
 - Recursive way (164ms):  
 A very straightforward one line recursive solution.
@@ -196,7 +196,7 @@ A very straightforward one line recursive solution.
 Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).  
 **Difficulty**:  
 Easy  
-**code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/107_LevelOrderBinaryTreeTraversalII.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/107_LevelOrderBinaryTreeTraversalII.cs)  
 **Explanation**:  
 - BFS solution (502ms):  
@@ -217,7 +217,7 @@ Given a binary tree:
 Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL. Note: You may only use constant extra space; You may assume that it is a perfect binary tree (ie, all leaves are at the same level, and every parent has two children).  
 **Difficulty**:  
 Medium  
-**code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/116_PopulatingNextRightPointersInEachNode.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/116_PopulatingNextRightPointersInEachNode.cs)  
 **Explanation**:  
 - BFS queue solution and DFS recursive solution (200ms):  
@@ -235,7 +235,7 @@ Say you have an array for which the ith element is the price of a given stock on
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).  
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/122_BestTimeToBuyAndSellStockII.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/122_BestTimeToBuyAndSellStockII.cs)  
 **Explanation**:  
 - Iteration way (148ms):  
@@ -249,7 +249,7 @@ Given an array of integers, every element appears
 twice except for one. Find that single one.  
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/136_SingleNumber.cs)  
 **Explanation**:  
 - Bitwise XOR (156ms, O(n)):  
@@ -263,7 +263,7 @@ This solution uses 'bitwise XOR' to quickly solve the problem, each element in t
 Given a linked list, determine if it has a cycle in it. Follow up: Can you solve it without using extra space?  
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/141_LinkedListCycle.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/141_LinkedListCycle.cs)  
 **Explanation**:  
 - Best way so far (156mms), refer to [[huxijiuhao's solution]](https://leetcode.com/discuss/54343/simple-and-easy-understanding-java-solution-time-n-space-o-1):  
@@ -276,7 +276,7 @@ The key to solve this problem is to find a way to track all visited nodes. Recor
 Given a binary tree, return the preorder traversal of its nodes' values. Note: Recursive solution is trivial, could you do it iteratively?  
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/144_BinaryTreePreOrderTraversal.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/144_BinaryTreePreOrderTraversal.cs)  
 **Explanation**:  
 - Recursion way (508ms):  
@@ -317,7 +317,7 @@ AB -> 28
 ```  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/168_ExcelSheetColumnTitle.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/168_ExcelSheetColumnTitle.cs)  
 **Explanation**:  
 - Modulo solution (48ms):  
@@ -333,7 +333,7 @@ Thus in every execution in the loop, do ```n--;``` at the begining.
 Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. You may assume that the array is non-empty and the majority element always exist in the array.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/169_MajorityElement.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/169_MajorityElement.cs)  
 **Explanation**:  
 - Sorting 2-line solution (152ms):  
@@ -357,7 +357,7 @@ AB -> 28
 ```  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/171_ExcelSheetColumnNumber.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/171_ExcelSheetColumnNumber.cs)  
 **Explanation**:  
 - Common way (164ms):  
@@ -371,7 +371,7 @@ Write a function that takes an unsigned integer and returns the number of '1' bi
 For example, the 32-bit integer '11' has binary representation 00000000000000000000000000001011, so the function should return 3.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/191_NumberOf1Bits.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/191_NumberOf1Bits.cs)  
 **Explanation**:  
 - Bitwise shift and modulo (56ms):  
@@ -384,7 +384,7 @@ do ```n % 2```, will actually return the LSB of n in binary. Add this value to t
 Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/217_ContainsDuplicate.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/217_ContainsDuplicate.cs)  
 **Explanation**:  
 - Via hashset solution (O(n), 176ms):  
@@ -397,7 +397,7 @@ In C# .NET, 2 features of Hashset<type> are used this problem. 1st, each element
 Invert a binary tree.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/226_InvertBinaryTree.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/226_InvertBinaryTree.cs)  
 **Explanation**:  
 - Recursive way (160ms):
@@ -410,7 +410,7 @@ Feel sorry for Max Howell. I might get nervous too.
 Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/235_LowestCommonAncestorOfABinarySearchTree.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/235_LowestCommonAncestorOfABinarySearchTree.cs)  
 **Explanation**:  
 - traversal solution(188ms):  
@@ -427,7 +427,7 @@ are given the third node with value 3, the linked list
 should become 1 -> 2 -> 4 after calling your function.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/237_DeleteNodeInALinkedList.cs)  
 **Explanation**:  
 - 2 line solution(172ms):  
@@ -443,7 +443,7 @@ Thus node0 now holds the properties of node1, and the node actually being discar
 Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Solve it without division and in O(n). For example, given [1,2,3,4], return [24,12,8,6]. Follow up: Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)  
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/238_ProductofArrayExceptSelf.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/238_ProductofArrayExceptSelf.cs)  
 **Explanation**:  
 - The best solution so far (512ms), refer to [[areshead's solution]](https://leetcode.com/discuss/53781/my-solution-beats-100%25-java-solutions)  :
@@ -457,7 +457,7 @@ Given a non-negative integer num, repeatedly add all its digits until the result
 For example: given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/258_AddDigits.cs)  
 **Explanation**:  
 - The best solution with O(1) time complexity:  
@@ -481,7 +481,7 @@ Given an array of numbers nums, in which exactly two elements appear only once a
 For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].  
 **Difficulty**:  
 Medium  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/260_SingleNumberIII.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/260_SingleNumberIII.cs)  
 **Explanation**:  
 - Bitwise way (564ms):  
@@ -502,7 +502,7 @@ Medium
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].  
 **Difficulty**:  
 Easy  
-**Code**:  
+**Source code**:  
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/283_MoveZeroes.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/283_MoveZeroes.cs)  
 **Explanation**:  
 - Iteration way (492ms), refer to [[fetoyal's solution]](https://leetcode.com/discuss/59355/3-lines-o-1-space-o-n-time-c):  
