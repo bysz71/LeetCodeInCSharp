@@ -19,6 +19,7 @@
 + #226 Invert binary tree
 + #235 Lowest Common Ancestor of a Binary Search Tree
 + #237 Delete node in a linked list
++ #238 Product of array except self
 + #258 Add digits
 + #260 Single number III
 + #283 Move Zeroes
@@ -357,6 +358,18 @@ The list pointer is not provided, thus you cannot iterate through the list, and 
 ```... ---> currentNodeToBeDeleted(node 0) ---> node1 ---> node2 ---> ...```  
 To delete node0, copy the value of node1 to node0, change node0's ```next``` to point to node2.  
 Thus node0 now holds the properties of node1, and the node actually being discarded on the memory is node1.
+
+## #238 Product of array except self
+**Problem description**: 
+Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i]. Solve it without division and in O(n). For example, given [1,2,3,4], return [24,12,8,6]. Follow up: Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)  
+**Problem Link**: [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)  
+**Difficulty**: 
+Medium  
+**Code**: [[code]](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/238_ProductofArrayExceptSelf.cs)  
+**Recursive runtime**: 512ms  
+**Explanation**:  
+- The best solution so far, refer to [[areshead's solution]](https://leetcode.com/discuss/53781/my-solution-beats-100%25-java-solutions)  :
+What it does is to iterate through the ```nums``` array twice. Firstly set ```pre``` and ```post``` to 1, they are the product before ```(i)th``` item and product after ```(i)th``` item. In the first loop, iterate through ```nums``` incrementally, set ```result[i]``` to ```pre``` and then update the ```pre``` by ```pre *= nums[i]```. In the second loop, iterate through ```nums``` decrementally, update ```result[i]``` by ```result[i] *= post``` and then update ```post``` by ```post *= nums[i]```.  
 
 ## #258 Add digits
 **Problem description**: 
