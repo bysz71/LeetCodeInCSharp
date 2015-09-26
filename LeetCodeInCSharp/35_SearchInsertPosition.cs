@@ -36,7 +36,7 @@ namespace LeetCodeInCSharp
                     mid = (high - low) / 2 + low;
                 }
             }
-            return (target > nums[high] ? high + 1 : high);
+            return target > nums[high] ? high + 1 : high;
         }
     }
 }
