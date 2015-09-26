@@ -63,6 +63,7 @@
     <Compile Include="169_MajorityElement.cs" />
     <Compile Include="238_ProductofArrayExceptSelf.cs" />
     <Compile Include="35_SearchInsertPosition.cs" />
+    <Compile Include="96_UniqueBinarySearchTrees.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
