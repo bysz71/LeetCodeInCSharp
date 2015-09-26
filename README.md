@@ -5,6 +5,7 @@
 + #35 Search insert position
 + #66 Plus One
 + #94 Binary tree in-order traversal
++ #96 Unique binary search trees
 + #100 Same tree
 + #104 Maximum depth of a binary tree
 + #107 Level order binary tree traversal II
@@ -117,6 +118,39 @@ It treats every right child as a start of a subtree. It stores a subtree in stac
 - Morris traversal  
 Seems to be the best iteration solution, to be implemented.
 
+## #96 Unique binary search trees
+**LeetCode Link**: [https://leetcode.com/problems/unique-binary-search-trees/](https://leetcode.com/problems/unique-binary-search-trees/)  
+**Problem description**:  
+Given n, how many structurally unique BST's (binary search trees) that store values 1...n?  
+For example, Given n = 3, there are a total of 5 unique BST's.
+```
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+```
+**Difficulty**: Medium  
+**Code**: [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/96_UniqueBinarySearchTrees.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/96_UniqueBinarySearchTrees.cs)  
+**Detail**:
+- Iteration way(52ms), refer to [rain4's solution](https://leetcode.com/discuss/55761/c%23-accepted-52ms-based-on-the-quora-answer) and [Mohit modi's explanation](https://www.quora.com/Given-n-how-many-structurally-unique-BSTs-binary-search-trees-that-store-values-1-to-n-are-there):  
+    + For different root choice, you can always devide the BST into left-sub-BST and right-sub-BST. Recursively for each sub-BST we can devide it into 2 sub-BSTs.
+    + For different root choice:  
+        1. root == 1, 0 element on the left, n - 1 element on the right
+        2. root == 2, 1 element on the left, n - 2 element on the right
+        3. root == 3, 2 element on the left, n - 3 element on the right
+        4. ...
+        5. root == i, i - 1 element on the left, n - i element on the right
+        6. ...
+        7. root == n, n - 1 element on the left, 0 element on the right
+    + For a BST of n nodes, we want to count all the possible root choices, thus let sum(n) represent the result, we have:  
+        ```sum(n) = sum(0)sum(n - 1) + sum(1)sum(n - 2) + sum(2)sum(n - 3) + ... + sum(i - 1)sum(n - i) + ... + sum(n - 1)sum(0)```
+    + Declare an array to store sum(1) to sum(n), although what we want is just sum(n), we still need to find out and store sum(1) to sum(n), because each sum is used by the next sum. To visualize each turn:  
+        1. ```sum(1) = 1``` for a BST with only 1 node, there is only 1 possible outcome.
+        2. ```sum(2) = sum(0)sum(1) + sum(1)sum(0) = 1 + 1 = 2``` sum(1) is acquired from above.
+        3. ```sum(3) = sum(0)sum(2) + sum(1)sum(1) + sum(2)sum(0) = 2 + 1 + 2 = 5```
+        4. ...  
+    At the end, we will get sum(n).
 
 ## #100 Same tree
 **LeetCode Link**: [https://leetcode.com/problems/same-tree/](https://leetcode.com/problems/same-tree/)  
