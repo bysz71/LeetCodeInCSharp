@@ -1,6 +1,7 @@
 # LeetCodeInCSharp
 
 # List
++ #13 Roman To Integer
 + #28 Implement strStr()
 + #35 Search insert position
 + #66 Plus One
@@ -29,6 +30,17 @@
 + #283 Move Zeroes
 
 # Detail
+## #13 Roman To Integer
+**LeetCode Link**:  
+[https://leetcode.com/submissions/detail/41291483/](https://leetcode.com/submissions/detail/41291483/)  
+**Problem description**:  
+Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.  
+**Source code**:  
+[https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/13_RomanToInteger.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/13_RomanToInteger.cs)  
+**Detail**:  
+-O(N) solution:
+The special notation combinations in Roman numerals are ```4:IV, 9:IX, 40:XL, 90:XC, 400:CD, 900:CM```, other than that, all notations are just added together. For this solution, iterate through the whole string, once meet a specific combination list above, move the iterator forward once more. Although this method takes to many lines, its worst case time complexity is only O(N), and it does not need extra space.
+
 ## #28 Implement strStr()
 **LeetCode Link**:  
 [https://leetcode.com/problems/implement-strstr/](https://leetcode.com/problems/implement-strstr/)  
