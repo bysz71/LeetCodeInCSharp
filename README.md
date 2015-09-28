@@ -85,11 +85,11 @@ Loop until ```low == high```(return exact match if there is), if```target > nums
 
 ## #53 Maximun Subarray
 **LeetCode Link**:  
-[]()  
+[https://leetcode.com/problems/maximum-subarray/](https://leetcode.com/problems/maximum-subarray/)  
 **Problem description**:  
 a  
 **Source code**:  
-[]()  
+[https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/53_MaximumSubarray.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/53_MaximumSubarray.cs)  
 **Detail**:  
 -O(n) solution, refer to [xi11's solution](https://leetcode.com/discuss/38913/o-n-time-o-1-space-dp-solution-java)  
 Assuming we have a abstract dynamic window, this window start from 0th item with 1 length. Declare a ```max``` to store current maximum sum, a ```prev``` to store latest iterated window's sum, a ```cur``` to store current window's sum, they are all initialized to ```nums[0]```. Iterate through nums, if ```prev``` is positive, previous window is worth adding to current item, thus the window expand to current item, the current sum ```cur``` equal to previous sum + current item ```cur = prev + nums[i]```; if prev is negative, it is not worth adding to current item, the life of old window ends, start a new window begin from current item, update current sum ```cur``` to current item ```nums[i]```'s value. ```max``` is independent with this windowing process, only that every time current sum ```cur``` changes, compare with old ```max``` and update ```max``` to ```Math.Max(max,cur)```.
