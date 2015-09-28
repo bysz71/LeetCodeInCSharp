@@ -63,6 +63,7 @@
     <Compile Include="UnitTest169_MajorityElement.cs" />
     <Compile Include="UnitTest137_SingleNumberII.cs" />
     <Compile Include="UnitTest13_RomanToInteger.cs" />
+    <Compile Include="UnitTest12_IntegerToRoman.cs" />
     <Compile Include="UnitTest53_MaximumSubarray.cs" />
     <Compile Include="UnitTest242_ValidAnagram.cs" />
     <Compile Include="UnitTest96_UniqueBinarySearchTrees.cs" />

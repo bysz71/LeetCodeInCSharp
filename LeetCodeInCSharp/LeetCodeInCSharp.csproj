@@ -68,6 +68,7 @@
     <Compile Include="137_SingleNumberII.cs" />
     <Compile Include="13_RomanToInteger.cs" />
     <Compile Include="53_MaximumSubarray.cs" />
+    <Compile Include="12_IntegerToRoman.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
