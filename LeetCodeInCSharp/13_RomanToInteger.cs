@@ -8,6 +8,7 @@ namespace LeetCodeInCSharp
 {
     public class RomanToIntSolution
     {
+        //O(n) solution
         public static int RomanToInt(string s)
         {
             var charArray = s.ToCharArray();
@@ -63,31 +64,6 @@ namespace LeetCodeInCSharp
                         i++;
                     }
                     else sum += 1;
-                }
-            }
-            return sum;
-        }
-
-        public static int RomanToInt2(string s)
-        {
-            var specialNotation = new Dictionary<int, string>() { { 900, "CM" }, { 400, "CD" }, { 90, "XC" }, { 40, "XL" }, { 9, "IX" }, { 4, "IV" } };
-            var normalNotation = new Dictionary<int, string>() { { 1, "I" }, { 5, "V" }, { 10, "X" }, { 50, "L" }, { 100, "C" }, { 500, "D" }, { 1000, "M" } };
-            int sum = 0;
-            int index = 0;
-            foreach (var notation in specialNotation)
-            {
-                while ((index = s.IndexOf(notation.Value)) != -1)
-                {
-                    sum += notation.Key;
-                    s = s.Remove(index, 2);
-                }
-            }
-            foreach (var notation in normalNotation)
-            {
-                while ((index = s.IndexOf(notation.Value)) != -1)
-                {
-                    sum += notation.Key;
-                    s = s.Remove(index, 1);
                 }
             }
             return sum;
