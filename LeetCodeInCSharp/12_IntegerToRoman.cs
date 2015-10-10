@@ -24,9 +24,7 @@ namespace LeetCodeInCSharp
         {
             int[] values = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
             string[] strs = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
-
-            string roman = ""; 
-
+            string roman = "";
             for (int i = 0; i < values.Length; i++)
             {
                 while (num >= values[i])
@@ -35,7 +33,6 @@ namespace LeetCodeInCSharp
                     roman += strs[i];
                 }
             }
-
             return roman;
         }
     }
