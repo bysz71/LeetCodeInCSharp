@@ -552,9 +552,7 @@ For example, Given nums = [0, 1, 3] return 2. Requires O(n) time complexity and 
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/268_MissingNumber.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/268_MissingNumber.cs)  
 **Explanation**:  
 - sum solution:  
-```nums``` is not sorted, we cannot sort it because the sorting time complexity would be O(nlogn). ```nums``` has at most 1 missing number, thus the basic strategy to solve this question is to fined expected sum and actual sum of ```nums```, and ```expectedSum - actualSum``` will be the missing number we want. However, there are several corner cases we need to consider  
-            + missing 0 (should return 0);
-            + missing nothing (should return max of nums + 1);
+```nums``` is not sorted, we cannot sort it because the sorting time complexity would be O(nlogn). ```nums``` has at most 1 missing number, thus the basic strategy to solve this question is to fined expected sum and actual sum of ```nums```, and ```expectedSum - actualSum``` will be the missing number we want. However, there are several corner cases we need to consider:```1. missing 0 (should return 0);2. missing nothing (should return max of nums + 1)```  
 To cover these corner cases, we calculate the sum: ```sum = nums.Length * (nums.Length + 1) / 2```, and iterate through ```nums``` to do ```sum -= nums[i]```. So if 0 is missing, it returns 0; if number is missing in between, it will return the number; if no number is missing, it will return ```nums.Length```.  
 
 ## #283 Move Zeroes
