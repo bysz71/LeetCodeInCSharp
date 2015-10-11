@@ -8,7 +8,7 @@ namespace LeetCodeInCSharpUnitTest
     public class UnitTest235_LowestCommonAncestorOfABinarySearchTree
     {
         [TestMethod]
-        public void LowestCommonAncestor()
+        public void TestMethodLowestCommonAncestor()
         {
             var tree0 = new TreeNode(20);
             tree0.left = new TreeNode(10);
