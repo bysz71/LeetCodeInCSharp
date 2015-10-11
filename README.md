@@ -7,6 +7,7 @@
 + #35 Search insert position
 + #53 Maximun Subarray
 + #66 Plus One
++ #83 Remove duplicates from sorted list
 + #94 Binary tree in-order traversal
 + #96 Unique binary search trees
 + #100 Same tree
@@ -140,6 +141,20 @@ The digits are stored such that the most significant digit is at the head of the
 **Explanation**:  
 - Simple iteration solution(500ms):  
 Iterate through ```digits```, from ```digits[digits.Length - 1]``` to ```digits[0]```. If current number is not 9, the loop is not worth continueing, thus just add ```1``` to it and break the loop, and return ```digits```; otherwise make current number ```0``` and continue. If nothing's returned after the loop, it means all digits are ```9```, thus create a new int array ```newDigits``` with ```Length = digits.Length + 1```, set ```newDigits[0]``` to ```1```, and return ```newDigits```.
+
+## #83 remove duplicates from sorted list
+**LeetCode Link**:  
+[https://leetcode.com/problems/remove-duplicates-from-sorted-list/](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)  
+**Problem description**:  
+Given a sorted linked list, delete all duplicates such that each element appear only once.  
+For example,  
+Given 1->1->2, return 1->2.  
+Given 1->1->2->3->3, return 1->2->3.  
+**Source code**:  
+[https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/83_RemoveDuplicatesFromSortedList.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/83_RemoveDuplicatesFromSortedList.cs)  
+**Explanation**:  
+- common solution:  
+if ```current.val == current.next.val```, ```current.next = current.next.next```.  
 
 ## #94 Binary tree in-order traversal
 **LeetCode Link**:  
