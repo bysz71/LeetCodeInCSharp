@@ -32,6 +32,7 @@
 + #260 Single number III
 + #268 Missing number
 + #283 Move Zeroes
++ #292 Nim Game
 
 # Detail
 ## #12 Integer to roman
@@ -580,3 +581,18 @@ Given an array nums, write a function to move all 0's to the end of it while mai
 **Explanation**:  
 - Iteration way (492ms), refer to [[fetoyal's solution]](https://leetcode.com/discuss/59355/3-lines-o-1-space-o-n-time-c):  
 Iterate through to find none-zero number and move to the front. Thanks to fetoyal's brillient solution.
+
+## #292 Nim Game
+**LeetCode Link**:  
+[https://leetcode.com/problems/nim-game/](https://leetcode.com/problems/nim-game/)  
+**Problem description**:  
+You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones.
+
+Both of you are very clever and have optimal strategies for the game. Write a function to determine whether you can win the game given the number of stones in the heap.
+
+For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.  
+**Source code**:  
+[https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/292_NimGame.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/292_NimGame.cs)  
+**Explanation**:  
+- 1 line solution:  
+Use back track, starting from the end. For the first 3, you win any way; if you are 4th, you lose anyway; if 5,6,7, you can put your oppenent to 4 to win the game; if 8, your oppenent will end up 5 or 6 or 7, you lose ... so you see the pattern
