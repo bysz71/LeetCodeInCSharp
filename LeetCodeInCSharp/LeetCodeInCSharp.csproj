@@ -72,6 +72,7 @@
     <Compile Include="268_MissingNumber.cs" />
     <Compile Include="83_RemoveDuplicatesFromSortedList.cs" />
     <Compile Include="292_NimGame.cs" />
+    <Compile Include="70_ClimbingStairs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
