@@ -7,6 +7,7 @@
 + #35 Search insert position
 + #53 Maximun Subarray
 + #66 Plus One
++ #70 Climbing stairs
 + #83 Remove duplicates from sorted list
 + #94 Binary tree in-order traversal
 + #96 Unique binary search trees
@@ -142,6 +143,18 @@ The digits are stored such that the most significant digit is at the head of the
 **Explanation**:  
 - Simple iteration solution(500ms):  
 Iterate through ```digits```, from ```digits[digits.Length - 1]``` to ```digits[0]```. If current number is not 9, the loop is not worth continueing, thus just add ```1``` to it and break the loop, and return ```digits```; otherwise make current number ```0``` and continue. If nothing's returned after the loop, it means all digits are ```9```, thus create a new int array ```newDigits``` with ```Length = digits.Length + 1```, set ```newDigits[0]``` to ```1```, and return ```newDigits```.
+
+## #70 Climbing stairs
+**LeetCode Link**:  
+[https://leetcode.com/problems/climbing-stairs/](https://leetcode.com/problems/climbing-stairs/)  
+**Problem description**:  
+You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  
+**Source code**:  
+[https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/70_ClimbingStairs.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/70_ClimbingStairs.cs)  
+**Explanation**:  
+- Fabonacci solution:  
+for ```n = 1 : ...```, the result would be ```1, 2, 3, 5, 8, 13, 21, 34, 55```, thus you can see it is a Fabonacci sequence. Except the first 2 numbers, every number equal to: ```number[i] = number[i-2] + number[i-1]```.
 
 ## #83 remove duplicates from sorted list
 **LeetCode Link**:  
