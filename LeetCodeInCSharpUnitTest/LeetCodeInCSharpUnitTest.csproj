@@ -64,6 +64,7 @@
     <Compile Include="UnitTest137_SingleNumberII.cs" />
     <Compile Include="UnitTest13_RomanToInteger.cs" />
     <Compile Include="UnitTest12_IntegerToRoman.cs" />
+    <Compile Include="UnitTest292_NimGame.cs" />
     <Compile Include="UnitTest83_RemoveDuplicatesFromSortedList.cs" />
     <Compile Include="UnitTest268_MissingNumber.cs" />
     <Compile Include="UnitTest53_MaximumSubarray.cs" />
