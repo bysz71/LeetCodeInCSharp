@@ -595,4 +595,4 @@ For example, if there are 4 stones in the heap, then you will never win the game
 [https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/292_NimGame.cs](https://github.com/scottszb1987/LeetCodeInCSharp/blob/master/LeetCodeInCSharp/292_NimGame.cs)  
 **Explanation**:  
 - 1 line solution:  
-Use back track, starting from the end. For the first 3, you win any way; if you are 4th, you lose anyway; if 5,6,7, you can put your oppenent to 4 to win the game; if 8, your oppenent will end up 5 or 6 or 7, you lose ... so you see the pattern
+Counting backwards, for the first 3, you win any way; if you are at 4th, you lose anyway; if 5,6,7, you can put your oppenent to 4 to win the game; if 8, your oppenent will end up 5 or 6 or 7, you lose ... so you see the pattern
