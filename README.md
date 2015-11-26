@@ -53,7 +53,7 @@ Very straight forward solution.
             var dic1000 = new Dictionary<int, string> { { 1, "M" }, { 2, "MM" }, { 3, "MMM" }, { 0, "" } };
             return dic1000[num / 1000 % 10] + dic100[num / 100 % 10] + dic10[num / 10 % 10] + dic1[num % 10];
 ```
--the smart solution, [refer to lucifer27's solution](https://leetcode.com/discuss/49870/my-java-solution-easy-to-understand):  This is slower, but cost 7/10 less space.
+-the smarter solution, [refer to lucifer27's solution](https://leetcode.com/discuss/49870/my-java-solution-easy-to-understand):  This is slower (O(N) or O(1)???since num has a upper limit???)
 ```
             int[] values = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
             string[] strs = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
