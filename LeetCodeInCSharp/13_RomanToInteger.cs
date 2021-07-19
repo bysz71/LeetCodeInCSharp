@@ -8,65 +8,42 @@ namespace LeetCodeInCSharp
 {
     public class RomanToIntSolution
     {
-        //O(n) solution
+
         public static int RomanToInt(string s)
+
         {
-            var charArray = s.ToCharArray();
-            var sum = 0;
-            for (int i = 0; i < charArray.Length; i++)
+            if (1 <= s?.Length && s?.Length >= 15) return 0;
+            if (!CheckString(s.ToUpper()) || string.IsNullOrWhiteSpace(s) ) return 0;
+
+            var lst = s?.ToUpper().ToCharArray().Select(x => ConvertCharToNumber(x)).ToList();
+            int sum = 0;
+            int current = 0;
+            for (int i = 0; i < lst?.Count; i++)
             {
-                if (charArray[i] == 'M')
-                    sum += 1000;
-                else if (charArray[i] == 'D')
-                    sum += 500;
-                else if (charArray[i] == 'C')
-                {
-                    if (i < charArray.Length - 1 && charArray[i + 1] == 'M')
-                    {
-                        sum += 900;
-                        i++;
-                    }
-                    else if (i < charArray.Length - 1 && charArray[i + 1] == 'D')
-                    {
-                        sum += 400;
-                        i++;
-                    }
-                    else sum += 100;
-                }
-                else if (charArray[i] == 'L')
-                    sum += 50;
-                else if (charArray[i] == 'X')
-                {
-                    if (i < charArray.Length - 1 && charArray[i + 1] == 'C')
-                    {
-                        sum += 90;
-                        i++;
-                    }
-                    else if (i < charArray.Length - 1 && charArray[i + 1] == 'L')
-                    {
-                        sum += 40;
-                        i++;
-                    }
-                    else sum += 10;
-                }
-                else if (charArray[i] == 'V')
-                    sum += 5;
-                else if (charArray[i] == 'I')
-                {
-                    if (i < charArray.Length - 1 && charArray[i + 1] == 'X')
-                    {
-                        sum += 9;
-                        i++;
-                    }
-                    else if (i < charArray.Length - 1 && charArray[i + 1] == 'V')
-                    {
-                        sum += 4;
-                        i++;
-                    }
-                    else sum += 1;
-                }
+                //current = i==0 ? lst[i]: lst[i-1];
+                if (i == 0) current = lst[i]; else current = lst[i - 1];
+                var IXC = new int[] { 1, 10, 100 };
+                if (IXC.Any(x => x == current) && IXC.Any(x => x < lst[i]))
+                    sum += lst[i] -(2 * current);
+                else
+                    sum += lst[i];
             }
+
             return sum;
         }
+                private static bool CheckString( string s) => s.All(new char[] { 'I', 'V', 'X', 'L', 'C', 'D', 'M' }.Contains);
+
+        private static int ConvertCharToNumber(char s) => s switch
+        {
+            'I' => 1,
+            'V' => 5,
+            'X' => 10,
+            'L' => 50,
+            'C' => 100,
+            'D' => 500,
+            'M' => 1000,
+            _ => 0
+        };
+        
     }
 }
